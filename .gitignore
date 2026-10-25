@@ -11,3 +11,6 @@ xcuserdata/
 
 # Worktrees for PR screenshots
 .worktrees/
+
+# Textbook lessons for the Class tab: copyrighted, kept local (see docs/course.md)
+Ohaneo/Resources/Course/
