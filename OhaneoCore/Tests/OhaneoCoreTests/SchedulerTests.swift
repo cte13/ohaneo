@@ -26,25 +26,22 @@ import Testing
         }
     }
 
-    @Test func phraseShareIsAboutThirtyPercentOfVocabDays() {
-        let mix = MixScheduler(grammarDaysPerWeek: 2, phrasePercent: 30, calendar: cal)
+    @Test func everyNonGrammarDayIsAPhraseDay() {
+        let mix = MixScheduler(grammarDaysPerWeek: 2, calendar: cal)
         let start = Fixtures.date(2026, 1, 1)
         let kinds = (0..<700).map { mix.kind(for: cal.adding(days: $0, to: start)) }
-        let vocab = kinds.filter { $0 != .grammar }
-        let share = Double(vocab.filter { $0 == .phrase }.count) / Double(vocab.count)
-        #expect(abs(share - 0.3) < 0.05)
         #expect(kinds.filter { $0 == .grammar }.count == 200)
+        #expect(kinds.filter { $0 == .phrase }.count == 500)
     }
 
-    @Test func noPhrasesAtZeroPercent() {
-        let mix = MixScheduler(grammarDaysPerWeek: 0, phrasePercent: 0, calendar: cal)
-        let start = Fixtures.date(2026, 1, 1)
-        #expect((0..<30).allSatisfy { mix.kind(for: cal.adding(days: $0, to: start)) == .word })
+    @Test func wordsAreOnlyAFallback() {
+        let mix = MixScheduler(grammarDaysPerWeek: 0, calendar: cal)
+        #expect(mix.kinds(for: Fixtures.date(2026, 10, 28)) == [.phrase, .word, .grammar])
     }
 
     @Test func fallbacksStartWithPreferredKind() {
         let mix = MixScheduler(grammarDaysPerWeek: 7, calendar: cal)
-        #expect(mix.kinds(for: Fixtures.date(2026, 10, 27)) == [.grammar, .word, .phrase])
+        #expect(mix.kinds(for: Fixtures.date(2026, 10, 27)) == [.grammar, .phrase, .word])
     }
 }
 

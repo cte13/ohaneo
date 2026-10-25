@@ -1,6 +1,7 @@
 import Foundation
 
-/// Picks the next word or phrase: placement leftovers first, then list order.
+/// Picks the next word or phrase. Words: placement leftovers first, then list
+/// order. Phrases: list order, which puts the most common first.
 public struct WordSelector: Sendable {
     public var library: SeedLibrary
 

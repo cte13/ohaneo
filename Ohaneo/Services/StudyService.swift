@@ -20,6 +20,8 @@ final class StudyService {
 
     /// Today's card.
     private(set) var today: StudyItem?
+    /// The card just marked "I know this", which today's card replaced.
+    private(set) var replacedKnown: StudyItem?
     /// Review prompts for today: answered ones first, then due ones (3 at most).
     private(set) var reviews: [StudyItem] = []
     /// Items whose AI content is being written right now.
@@ -69,12 +71,17 @@ final class StudyService {
             factsSynced = true
         }
 
+        // Today's card is the newest one shown today. A card marked "I know
+        // this" was replaced by the next one, so cards not marked known win.
         if let current = items
             .filter({ $0.scheduledFor == day && $0.status != .skipped && $0.status != .upcoming })
-            .max(by: { $0.createdAt < $1.createdAt }) {
+            .max(by: { ($0.status != .known ? 1 : 0, $0.createdAt) < ($1.status != .known ? 1 : 0, $1.createdAt) }) {
             today = current
         } else {
             today = show(kinds: planner.mix.kinds(for: day), on: day)
+        }
+        if let replaced = replacedKnown, replaced.scheduledFor != day || replaced.modelContext == nil {
+            replacedKnown = nil
         }
 
         loadReviews()
@@ -89,7 +96,10 @@ final class StudyService {
         return max(0, DailyPlanner.maxSkipsPerDay - skipped)
     }
 
+    /// Marking today's new card "I know this" brings the next item of the same
+    /// kind, so something you already knew doesn't use up the day.
     func mark(_ item: StudyItem, as status: ItemStatus) {
+        let replacesToday = status == .known && item.id == today?.id && item.status == .new
         switch status {
         case .learning:
             let state = reviewScheduler.startLearning(today: now())
@@ -104,6 +114,10 @@ final class StudyService {
             return
         }
         item.markedAt = now()
+        if replacesToday {
+            replacedKnown = item
+            replaceToday(keeping: item.kind)
+        }
         save()
     }
 
@@ -112,11 +126,33 @@ final class StudyService {
         guard let current = today, current.status == .new, skipsLeftToday > 0 else { return }
         current.status = .skipped
         current.markedAt = now()
+        replacedKnown = nil
+        replaceToday(keeping: current.kind)
+        save()
+    }
+
+    /// Takes back "I know this": the known card returns as today's card and its
+    /// replacement goes back to the prepared items.
+    func undoKnown() {
+        guard let replaced = replacedKnown, replaced.modelContext != nil else { return }
+        if let current = today, current.status == .new {
+            current.status = .upcoming
+            current.scheduledFor = nil
+        }
+        replaced.status = .new
+        replaced.markedAt = nil
+        replaced.createdAt = now()
+        today = replaced
+        replacedKnown = nil
+        save()
+    }
+
+    /// Shows the next item, the same kind first.
+    private func replaceToday(keeping kind: ItemKind) {
         let day = currentDay
-        let order = [current.kind] + planner.mix.kinds(for: day).filter { $0 != current.kind }
+        let order = [kind] + planner.mix.kinds(for: day).filter { $0 != kind }
         today = show(kinds: order, on: day)
         preparePool()
-        save()
         generateMissingContent()
     }
 
@@ -150,6 +186,7 @@ final class StudyService {
     func eraseAll() {
         try? context.delete(model: StudyItem.self)
         today = nil
+        replacedKnown = nil
         reviews = []
         save()
     }
@@ -177,6 +214,8 @@ final class StudyService {
             if let pooled = pooledItems().first(where: { $0.kind == kind }) {
                 pooled.status = .new
                 pooled.scheduledFor = day
+                // The newest item scheduled today is today's card (see refresh).
+                pooled.createdAt = now()
                 return pooled
             }
             if let seed = planner.nextSeed(kinds: [kind], history: allItems().map(\.historyEntry), today: day) {
@@ -193,6 +232,11 @@ final class StudyService {
     private func preparePool() {
         let day = currentDay
         let needed = Dictionary(grouping: planner.upcomingKinds(after: day), by: { $0 }).mapValues(\.count)
+        // Kinds the mix no longer uses, like word cards prepared before
+        // phrases took over the non-grammar days.
+        for item in pooledItems() where needed[item.kind] == nil {
+            context.delete(item)
+        }
         for (kind, count) in needed.sorted(by: { $0.key.rawValue < $1.key.rawValue }) {
             let have = pooledItems().filter { $0.kind == kind }.count
             guard have < count else { continue }

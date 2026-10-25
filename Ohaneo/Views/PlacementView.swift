@@ -162,7 +162,7 @@ struct PlacementView: View {
 
     private var summary: some View {
         let result = result
-        let firstWord = WordSelector(library: library).next(kind: .word, placement: result, excluded: [])
+        let firstPhrase = WordSelector(library: library).next(kind: .phrase, placement: result, excluded: [])
         let firstGrammar = GrammarSelector(library: library).next(seen: [], known: result.knownGrammarIDs, excluded: [])
         return VStack(alignment: .leading, spacing: 18) {
             Spacer()
@@ -170,14 +170,14 @@ struct PlacementView: View {
                 .font(.title.weight(.semibold))
                 .foregroundStyle(Theme.ink)
             VStack(alignment: .leading, spacing: 14) {
-                if let firstWord {
-                    summaryLine("New words start around #\(result.startRank.formatted()) of \(library.words.count.formatted()), with words like", firstWord.korean)
+                if let firstPhrase {
+                    summaryLine("Phrases start with the most common ones, like", firstPhrase.korean)
                 }
                 if let firstGrammar {
                     summaryLine("Grammar starts with", firstGrammar.pattern)
                 }
-                if !result.priorityWordIDs.isEmpty {
-                    Text("The \(result.priorityWordIDs.count) easier words you didn't know come first.")
+                if result.startRank > 1 {
+                    Text("Example sentences will use the \((result.startRank - 1).formatted()) most common words, which you likely know.")
                         .foregroundStyle(Theme.inkSecondary)
                 }
             }

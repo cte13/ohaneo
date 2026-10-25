@@ -31,13 +31,13 @@ struct SettingsView: View {
 
                 Section {
                     if let placement = store.preferences.placement {
-                        LabeledContent("New words start at", value: "#\(placement.startRank.formatted())")
+                        LabeledContent("Words you likely know", value: "The \(max(placement.startRank - 1, 0).formatted()) most common")
                     }
                     Button("Redo placement") { redoingPlacement = true }
                 } header: {
                     Text("Starting point")
                 } footer: {
-                    Text("Your history and review progress are kept.")
+                    Text("Example sentences use these words. Redoing placement keeps your history and review progress.")
                 }
 
                 Section("About") {

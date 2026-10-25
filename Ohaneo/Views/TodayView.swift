@@ -10,6 +10,9 @@ struct TodayView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 28) {
                 header
+                if let known = service.replacedKnown, service.today?.status == .new {
+                    replacedNote(known)
+                }
                 if let item = service.today {
                     card(for: item)
                 } else {
@@ -67,6 +70,18 @@ struct TodayView: View {
             ResponseBar(item: item)
         }
         .id(item.id)
+    }
+
+    private func replacedNote(_ known: StudyItem) -> some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text("\(Text(known.korean).font(.batang(15, bold: true, relativeTo: .subheadline))) marked as known. Here's the next one.")
+                .foregroundStyle(Theme.inkSecondary)
+            Spacer()
+            Button("Undo") {
+                withAnimation(reduceMotion ? nil : .smooth(duration: 0.25)) { service.undoKnown() }
+            }
+        }
+        .font(.subheadline)
     }
 
     /// Debug launch argument `-reveal` opens today's card, for screenshots.

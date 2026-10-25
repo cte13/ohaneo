@@ -109,6 +109,8 @@ public struct SeedWord: Codable, Hashable, Sendable, Identifiable {
     public var topics: [String]
     /// Verbs and adjectives only.
     public var forms: WordForms?
+    /// Phrases only: the dictionary words the phrase is built from, as word IDs.
+    public var wordIDs: [String]?
 
     /// Verbs and adjectives, which must be conjugated inside a sentence.
     public var isPredicate: Bool {
@@ -118,7 +120,8 @@ public struct SeedWord: Codable, Hashable, Sendable, Identifiable {
     public init(
         id: String, korean: String, kind: ItemKind = .word, meaning: String,
         definition: String? = nil, partOfSpeech: String? = nil, hanja: String? = nil,
-        level: Level = .beginner, rank: Int, topics: [String] = [], forms: WordForms? = nil
+        level: Level = .beginner, rank: Int, topics: [String] = [], forms: WordForms? = nil,
+        wordIDs: [String]? = nil
     ) {
         self.id = id
         self.korean = korean
@@ -131,6 +134,7 @@ public struct SeedWord: Codable, Hashable, Sendable, Identifiable {
         self.rank = rank
         self.topics = topics
         self.forms = forms
+        self.wordIDs = wordIDs
     }
 }
 

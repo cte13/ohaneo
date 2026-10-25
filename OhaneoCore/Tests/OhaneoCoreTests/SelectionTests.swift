@@ -93,12 +93,28 @@ import Testing
         #expect(!vocab.contains("건너뜀"))
     }
 
+    @Test func examplesReuseTheWordsInsideAPhrase() {
+        var phrases = Fixtures.phrases(3)
+        phrases[0].wordIDs = ["w:70", "w:71"]
+        var prefs = StudyPreferences()
+        prefs.placement = PlacementResult(startRank: 50)
+        let lib = SeedLibrary(words: Fixtures.words(100), phrases: phrases, grammar: [])
+        let history = [
+            HistoryEntry(seedID: "p:1", kind: .phrase, korean: "표현1", status: .learning, markedAt: today),
+            HistoryEntry(seedID: "p:2", kind: .phrase, korean: "표현2", status: .known, markedAt: cal.adding(days: -1, to: today)),
+        ]
+        let vocab = DailyPlanner(library: lib, preferences: prefs, calendar: cal).exampleVocabulary(history: history, today: today, limit: 6)
+        // A phrase with listed words gives its words; one without gives itself.
+        #expect(Array(vocab.prefix(3)) == ["단어70", "단어71", "표현2"])
+        #expect(!vocab.contains("표현1"))
+    }
+
     @Test func upcomingKindsCoverNextThreeDays() {
-        // Sunday → Mon (vocab), Tue (grammar), Wed (vocab).
+        // Sunday → Mon (phrase), Tue (grammar), Wed (phrase).
         let kinds = planner().upcomingKinds(after: today)
         #expect(kinds.count == 3)
         #expect(kinds[1] == .grammar)
-        #expect(kinds[0] != .grammar && kinds[2] != .grammar)
+        #expect(kinds[0] == .phrase && kinds[2] == .phrase)
     }
 }
 

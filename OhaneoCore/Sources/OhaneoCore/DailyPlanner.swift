@@ -36,7 +36,7 @@ public struct DailyPlanner: Sendable {
     }
 
     public var mix: MixScheduler {
-        MixScheduler(grammarDaysPerWeek: preferences.grammarDaysPerWeek, phrasePercent: preferences.phrasePercent, calendar: calendar)
+        MixScheduler(grammarDaysPerWeek: preferences.grammarDaysPerWeek, calendar: calendar)
     }
 
     /// Kinds for the days after `today` that should have items prepared.
@@ -79,13 +79,18 @@ public struct DailyPlanner: Sendable {
         return nil
     }
 
-    /// Words to reuse in example sentences: recent Learning and Known words, topped
-    /// up with words from below your starting point (always available on day one).
+    /// Words to reuse in example sentences: recent Learning and Known words (a
+    /// phrase counts as the words it's built from), topped up with words from
+    /// below your starting point (always available on day one).
     public func exampleVocabulary(history: [HistoryEntry], today: Date, limit: Int = 20) -> [String] {
         let recent = history
             .filter { $0.kind.isVocab && ($0.status == .learning || $0.status == .known) }
             .sorted { ($0.markedAt ?? .distantPast) > ($1.markedAt ?? .distantPast) }
-            .map(\.korean)
+            .flatMap { entry -> [String] in
+                guard entry.kind == .phrase, let phrase = library.word(id: entry.seedID) else { return [entry.korean] }
+                let words = library.words(in: phrase).map(\.korean)
+                return words.isEmpty ? [entry.korean] : words
+            }
 
         var result: [String] = []
         for word in recent where !result.contains(word) && result.count < limit / 2 {

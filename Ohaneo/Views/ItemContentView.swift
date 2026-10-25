@@ -83,6 +83,12 @@ struct CardDetails: View {
                 FormsTable(forms: forms)
             }
         }
+        if !phraseWords.isEmpty {
+            VStack(alignment: .leading, spacing: 10) {
+                SectionHeading("Words in this phrase")
+                PhraseWordsTable(words: phraseWords)
+            }
+        }
         examples
         if let nuance = item.nuance {
             note("How it's used", nuance)
@@ -90,6 +96,12 @@ struct CardDetails: View {
         if let mnemonic = item.mnemonic {
             note("Memory hook", mnemonic)
         }
+    }
+
+    /// The dictionary words a phrase is built from, with meanings from the word list.
+    private var phraseWords: [SeedWord] {
+        guard item.kind == .phrase, let phrase = service.library.word(id: item.seedID) else { return [] }
+        return service.library.words(in: phrase)
     }
 
     // MARK: Grammar
@@ -208,6 +220,38 @@ struct FormsTable: View {
         .padding(.trailing, 4)
         .overlay(Rectangle().stroke(Theme.grid, lineWidth: 1))
         .accessibilityElement(children: .contain)
+    }
+}
+
+/// The words inside a phrase in dictionary form, each with its meaning and a
+/// listen button, drawn like the forms table.
+struct PhraseWordsTable: View {
+    let words: [SeedWord]
+
+    var body: some View {
+        Grid(alignment: .leading, horizontalSpacing: 14, verticalSpacing: 0) {
+            ForEach(Array(words.enumerated()), id: \.element.id) { index, word in
+                if index > 0 {
+                    GridRule().gridCellUnsizedAxes(.horizontal)
+                }
+                GridRow {
+                    Text(word.korean)
+                        .font(.batang(19, bold: true, relativeTo: .body))
+                        .foregroundStyle(Theme.ink)
+                    Text(word.meaning)
+                        .font(.subheadline)
+                        .foregroundStyle(Theme.inkSecondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    ListenButton(text: word.korean, size: .small)
+                        .gridColumnAlignment(.trailing)
+                }
+                .padding(.vertical, 2)
+            }
+        }
+        .padding(.leading, 12)
+        .padding(.trailing, 4)
+        .overlay(Rectangle().stroke(Theme.grid, lineWidth: 1))
     }
 }
 

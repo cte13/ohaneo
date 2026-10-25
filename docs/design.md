@@ -8,6 +8,7 @@
 |---|---|---|
 | **Level** | Upper beginner: reads Hangul easily, follows basic conversation | First launch has a **2-minute placement swipe** (about 30 words + 10 grammar patterns, "know / don't know") that sets the starting point. See "Placement" below. |
 | **Main problem** | Growing vocabulary *and keeping it* | **Review is in the MVP.** Example sentences use words you've already seen, so each card also revisits old vocabulary. |
+| **What to learn** | Useful, common phrases first | **Every non-grammar day is a phrase**, most common first, mixing survival phrases (ordering, getting around) with everyday conversation. Each phrase card lists the words it's built from, so vocabulary grows through phrases. Single words are only a fallback. See "Phrases first". |
 | **Grammar** | Include a mix of grammar lessons | Grammar points share the daily slot with vocab (default **2 grammar days a week**). They come from a curated curriculum, and the AI personalizes the examples. See §3. |
 | **AI** | Apple Intelligence first, Anthropic key available | MVP uses `FoundationModelsGenerator`. `AnthropicGenerator` (Claude Messages API, key in Keychain) comes later through the same `ContentGenerator` protocol, as a Settings toggle. |
 | **AI availability** | Assume Apple Intelligence is always available for the MVP | No fallback content path in Phase 1. The app checks availability once at launch and shows a plain "Apple Intelligence is required" screen if it's missing. |
@@ -17,7 +18,7 @@
 **Tooling:** Xcode 26.6 + XcodeGen are installed. The project is defined in `project.yml` at the repo root. Pure logic (selectors, schedulers, placement) lives in a local Swift package, `OhaneoCore`, so it can be unit-tested with `swift test` without a simulator.
 
 ### Placement
-- **Words:** about 30 words sampled evenly across 5 frequency bands. The starting point is the first band where you know fewer than half. Everything in lower bands is treated as "assumed known" (never shown, but used in example sentences).
+- **Words:** about 30 words sampled evenly across 5 frequency bands. The starting point is the first band where you know fewer than half. Everything in lower bands is treated as "assumed known" and used in example sentences. (Single-word cards start there too, but they only appear once the phrase list runs out.)
 - **Grammar:** the first 10 patterns of the curriculum. A pattern you know is marked known, and so are its prerequisites.
 - Placement can be redone from Settings.
 
@@ -43,22 +44,33 @@
 flowchart LR
     A["Widget / daily notification"] --> B["Today card (word, phrase or grammar)"]
     B --> C{"Your response"}
-    C -->|"I know this"| D["Marked known, never shown again"]
+    C -->|"I know this"| D["Marked known, never shown again; the next item takes its place"]
     C -->|"Learning"| E["Added to light review queue"]
     C -->|"Skip"| F["Next item from the same track; skipped item can return in 30 days"]
     B --> G["Ask AI: more examples, compare with similar"]
     E --> H["Resurfaces as a quick recall check"]
 ```
 
-**Weekly rhythm (default):** one item per day, about **5 vocab days** (words and phrases, ~70/30) and **2 grammar days**. Grammar days are spread out (e.g. Tue and Fri) instead of chosen at random, so they never bunch up. Settings has a slider for "Grammar days per week: 0–7".
+**Weekly rhythm (default):** one item per day, **5 phrase days** and **2 grammar days**. Grammar days are spread out (e.g. Tue and Fri) instead of chosen at random, so they never bunch up. Settings has a slider for "Grammar days per week: 0–7".
 
 **What counts as a day:** local calendar day, starting at midnight. Days you don't open the app are simply missed. Items don't pile up, and the next open shows one item for today.
+
+**I know this** on today's new card brings the next item of the same kind straight away, so a phrase you already knew doesn't use up the day. A note above the card names the one you knew, with **Undo**. Marking known later (from "Change" or History) doesn't replace anything.
 
 **Skip** means "not now". The card is replaced by the next item from the same track (at most 3 skips a day). The skipped item shows in History as *Skipped* and goes back into the pool after 30 days.
 
 ### Vocab card
 - **Front:** the Hangul word, big, with a 🔊 button (on-device TTS).
 - **Reveal:** English meaning, part of speech, 1–2 examples (Hangul + English), a nuance note, and Hanja where it applies (학교 → 學校). Meaning, part of speech and Hanja come from the bundled dictionary data; the AI writes only the examples, nuance and mnemonic.
+
+### Phrase card
+- Like the vocab card, plus **Words in this phrase**: each dictionary word the phrase is built from (계산해 주세요 → 계산 · 하다 · 주다), with its meaning from `words.json` and a 🔊 button.
+
+### Phrases first
+- **Order:** `phrases.json` is in presentation order: the phrases you'd hear or say most often first, survival and conversation mixed, idioms and proverbs later. There's no open frequency data for Korean phrases, so the order is a judgment call made in `Tools/build_phrases.py`. Topics still pick within the next 50.
+- **Words inside:** each phrase lists its words as `wordIDs`, resolved against `words.json` when the list is built. The build stops on a missing or ambiguous word. A word is left out when its word-list meaning doesn't fit the phrase (걸리다 is glossed only as "hang", so 얼마나 걸려요 doesn't list it).
+- **Examples:** a phrase in your history adds its words, not the whole phrase, to the vocabulary the AI reuses in examples.
+- **Size:** about 300 phrases, roughly 14 months at 5 a week. The list grows with app updates; when it runs out, single words fill phrase days.
 
 ### Grammar card
 - **Front:** the pattern and a one-line description of what it does.
@@ -120,7 +132,7 @@ A small on-device model will sometimes invent conjugation rules that sound right
 |---|---|
 | **Today** | Daily card (vocab or grammar), actions, up to 3 review prompts, "Ask about this" |
 | **History** | Grouped by date; filter by **type** (Words / Phrases / Grammar) and **status** (Learning / Known / Skipped); search Korean or English |
-| **Settings** | Redo placement, notification time or off (MVP); grammar days per week, word vs phrase mix, topics (food, travel, work, K-drama…), AI provider (later); About with data attributions |
+| **Settings** | Redo placement, notification time or off (MVP); grammar days per week, topics (food, travel, work, K-drama…), AI provider (later); About with data attributions |
 
 Plus **Home Screen and Lock Screen widgets**: today's word or grammar pattern. A **Reveal** button (an interactive widget button backed by an `AppIntent`, with the revealed state saved in the App Group) shows the meaning in place; tapping anywhere else opens the app. The app calls `WidgetCenter.reloadAllTimelines()` whenever you mark an item or a new day's item is chosen.
 
@@ -152,7 +164,7 @@ flowchart TD
 `MixScheduler`, `ReviewScheduler`, `WordSelector`, `GrammarSelector` and placement live in `OhaneoCore` and take an injected clock and calendar. Store access stays on the main actor (the writes are tiny); the AI calls run asynchronously and their results are written back on the main actor.
 
 ### Key principle: curated lists choose, AI adds detail
-- **Vocab:** the NIKL (국립국어원) basic vocabulary list (~6,000 words, graded 초급/중급/고급) plus a few hundred common phrases. English meanings, part of speech and Hanja come from the NIKL learner's dictionary (한국어기초사전 / krdict), which is CC BY-SA 2.0 KR, so the About screen credits it. Every entry has a stable `seedID` built from the krdict entry ID (`w:<id>`), so words with several meanings (차 = car / tea / difference) are separate entries. `WordSelector` filters by level, topics and mix, and excludes anything already in history by `seedID`.
+- **Vocab:** the NIKL (국립국어원) basic vocabulary list (~6,000 words, graded 초급/중급/고급) plus about 300 common phrases, each linked to the words it contains. English meanings, part of speech and Hanja come from the NIKL learner's dictionary (한국어기초사전 / krdict), which is CC BY-SA 2.0 KR, so the About screen credits it. Every entry has a stable `seedID` built from the krdict entry ID (`w:<id>`), so words with several meanings (차 = car / tea / difference) are separate entries. `WordSelector` filters by level and topics, and excludes anything already in history by `seedID`.
 - **Grammar:** `grammar.json` as described in §3.
 - **Levels:** one scale everywhere: `beginner` / `intermediate` / `advanced` (초급 / 중급 / 고급), matching the NIKL data. Finer ordering comes from frequency rank (vocab) or curriculum order (grammar).
 - **AI generation** returns typed `@Generable` structs (`VocabContent`, `GrammarExamples`), so the output always renders cleanly. The prompt is given a sample of your *Learning* and *Known* words so the examples reuse them. On day one, when history is empty, it uses the "assumed known" words from placement instead.
@@ -166,7 +178,7 @@ The result: no repeats, works offline, curated grammar facts, and AI used where 
 | **Anthropic Claude** (later) | Much better nuance, grammar explanations and chat | Needs network; uses your API key and costs per request |
 
 ### Pre-generation
-Each time the app opens, it prepares the next **3 days** of items in the background. Widgets and notifications always have content, and a failed AI call never leaves the screen empty. Changing settings that affect selection (topics, mix, grammar days, placement) deletes prepared items that haven't been shown yet (`.upcoming`) and prepares them again.
+Each time the app opens, it prepares the next **3 days** of items in the background. Widgets and notifications always have content, and a failed AI call never leaves the screen empty. Changing settings that affect selection (topics, grammar days, placement) deletes prepared items that haven't been shown yet (`.upcoming`) and prepares them again.
 
 ---
 
@@ -234,11 +246,11 @@ struct GrammarDetail: Codable {
 
 - **Unit tests** (`swift test` in `OhaneoCore`): `MixScheduler`, `ReviewScheduler`, `WordSelector`, `GrammarSelector` and placement, all with an injected clock and calendar so day boundaries, missed days and time zones are deterministic.
 - **`FakeContentGenerator`** returns fixed content. It powers SwiftUI previews and the UI tests, so they run without the on-device model.
-- **Data checks:** a test loads the bundled `words.json` and `grammar.json` and checks that IDs are unique, every prerequisite and contrast ID exists, and the prerequisite graph has no cycles.
+- **Data checks:** a test loads the bundled `words.json`, `phrases.json` and `grammar.json` and checks that IDs are unique, every phrase's words exist, every prerequisite and contrast ID exists, and the prerequisite graph has no cycles.
 
 ---
 
 ## 9. Defaults (assumed unless you say otherwise)
-- **Mix:** 2 grammar days a week; vocab days ~70% words / 30% phrases.
+- **Mix:** 2 grammar days a week; every other day is a phrase.
 - **Devices:** iPhone only for now.
 - **App name:** 오한어 (Ohaneo), short for 오늘의 한국어. Bundle ID `dev.ohaneo.app`, App Group `group.dev.ohaneo.app`.

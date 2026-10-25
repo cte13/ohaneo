@@ -25,7 +25,7 @@ import Testing
         let defaults = UserDefaults(suiteName: "test-\(UUID().uuidString)")!
         preferences = PreferencesStore(defaults: defaults)
         preferences.preferences.placement = PlacementResult(startRank: 100)
-        // A Sunday, so tomorrow is a vocab day and Tuesday a grammar day.
+        // A Sunday, so tomorrow is a phrase day and Tuesday a grammar day.
         clock = Clock(Calendar.current.date(from: DateComponents(year: 2026, month: 10, day: 25, hour: 9))!)
         let clock = clock
         service = StudyService(
@@ -45,7 +45,7 @@ import Testing
         service.refresh()
         let today = try #require(service.today)
         #expect(today.status == .new)
-        #expect(today.kind != .grammar)
+        #expect(today.kind == .phrase)
         let upcoming = try allItems().filter { $0.status == .upcoming }
         #expect(upcoming.count == 3)
         #expect(upcoming.filter { $0.kind == .grammar }.count == 1)
@@ -89,6 +89,62 @@ import Testing
         let last = service.today?.id
         service.skip()
         #expect(service.today?.id == last)
+    }
+
+    @Test func knownTodayBringsTheNextPhrase() throws {
+        service.refresh()
+        let first = try #require(service.today)
+        service.mark(first, as: .known)
+        let next = try #require(service.today)
+        #expect(next.id != first.id)
+        #expect(next.kind == .phrase)
+        #expect(next.status == .new)
+        #expect(first.status == .known)
+        #expect(service.replacedKnown?.id == first.id)
+
+        // The replacement stays today's card, also after it's answered.
+        service.mark(next, as: .learning)
+        service.refresh()
+        #expect(service.today?.id == next.id)
+        #expect(service.skipsLeftToday == DailyPlanner.maxSkipsPerDay)
+    }
+
+    @Test func undoBringsTheKnownCardBack() throws {
+        service.refresh()
+        let first = try #require(service.today)
+        service.mark(first, as: .known)
+        let replacement = try #require(service.today)
+        service.undoKnown()
+        #expect(service.today?.id == first.id)
+        #expect(first.status == .new)
+        #expect(replacement.status == .upcoming)
+        #expect(service.replacedKnown == nil)
+        service.refresh()
+        #expect(service.today?.id == first.id)
+    }
+
+    @Test func knownFromTheChangeMenuDoesNotReplace() throws {
+        service.refresh()
+        let item = try #require(service.today)
+        service.mark(item, as: .learning)
+        service.mark(item, as: .known)
+        #expect(service.today?.id == item.id)
+        #expect(service.replacedKnown == nil)
+    }
+
+    @Test func preparedWordCardsFromBeforeArePutBack() throws {
+        let library = try SeedLibrary.bundled()
+        let word = StudyItem(seed: .word(library.words[700]), library: library)
+        word.status = .upcoming
+        container.mainContext.insert(word)
+        service.refresh()
+        #expect(try allItems().allSatisfy { $0.kind != .word })
+    }
+
+    @Test func phraseCardsListTheirWords() throws {
+        let library = try SeedLibrary.bundled()
+        let phrase = try #require(library.phrases.first { $0.korean == "계산해 주세요" })
+        #expect(library.words(in: phrase).map(\.korean) == ["계산", "하다", "주다"])
     }
 
     @Test func learningItemComesBackForReviewTomorrow() throws {

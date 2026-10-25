@@ -25,6 +25,14 @@ import Testing
         #expect(Set(phraseRanks).count == phraseRanks.count)
     }
 
+    @Test func phrasesListOnlyKnownWords() {
+        var phrase = Fixtures.phrases(1)[0]
+        phrase.wordIDs = ["w:1", "w:999"]
+        let lib = SeedLibrary(words: Fixtures.words(5), phrases: [phrase], grammar: [])
+        #expect(lib.validate() == ["p:1 lists unknown word w:999"])
+        #expect(lib.words(in: phrase).map(\.id) == ["w:1"])
+    }
+
     @Test func noRomanizationInKorean() throws {
         let library = try SeedLibrary.bundled()
         let latin = (library.words + library.phrases).filter { $0.korean.range(of: "[A-Za-z]", options: .regularExpression) != nil }

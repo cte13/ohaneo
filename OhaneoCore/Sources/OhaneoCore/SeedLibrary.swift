@@ -23,6 +23,11 @@ public struct SeedLibrary: Sendable {
     public func word(id: String) -> SeedWord? { wordsByID[id] }
     public func pattern(id: String) -> GrammarPattern? { grammarByID[id] }
 
+    /// The dictionary words a phrase is built from, in phrase order.
+    public func words(in phrase: SeedWord) -> [SeedWord] {
+        (phrase.wordIDs ?? []).compactMap { wordsByID[$0] }.filter { $0.kind == .word }
+    }
+
     public func seed(id: String) -> Seed? {
         if let w = wordsByID[id] { return .word(w) }
         if let g = grammarByID[id] { return .grammar(g) }
@@ -78,6 +83,14 @@ public struct SeedLibrary: Sendable {
         for w in words + phrases where w.korean.isEmpty || w.meaning.isEmpty {
             problems.append("\(w.id) is missing Korean or meaning")
         }
+
+        let wordIDs = Set(words.map(\.id))
+        for p in phrases {
+            for id in p.wordIDs ?? [] where !wordIDs.contains(id) {
+                problems.append("\(p.id) lists unknown word \(id)")
+            }
+        }
+        for w in words where w.wordIDs != nil { problems.append("\(w.id) is a word but lists words") }
 
         for g in grammar {
             for p in g.prerequisites {
