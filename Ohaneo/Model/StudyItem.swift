@@ -24,6 +24,8 @@ final class StudyItem {
     // mnemonic are written by the AI.
     var partOfSpeech: String?
     var hanja: String?
+    /// Verbs and adjectives: polite, polite past and formal forms (JSON).
+    var formsData: Data?
     var nuance: String?
     var mnemonic: String?
 
@@ -44,6 +46,8 @@ final class StudyItem {
     // AI content state
     var generatedAt: Date?
     var generationFailed: Bool = false
+    /// Which version of the generator rules wrote the AI content.
+    var contentVersion: Int = 0
 
     @Relationship(deleteRule: .cascade, inverse: \ChatMessage.item)
     var chat: [ChatMessage]? = []
@@ -73,6 +77,11 @@ final class StudyItem {
     var examples: [Example] {
         get { examplesData.flatMap { try? JSONDecoder().decode([Example].self, from: $0) } ?? [] }
         set { examplesData = try? JSONEncoder().encode(newValue) }
+    }
+
+    var forms: WordForms? {
+        get { formsData.flatMap { try? JSONDecoder().decode(WordForms.self, from: $0) } }
+        set { formsData = try? newValue.map { try JSONEncoder().encode($0) } }
     }
 
     var grammar: GrammarDetail? {
@@ -126,6 +135,7 @@ extension StudyItem {
             definition = w.definition
             partOfSpeech = w.partOfSpeech
             hanja = w.hanja
+            forms = w.forms
             level = w.level
         case .grammar(let g):
             self.init(seedID: g.id, kind: .grammar, korean: g.pattern, meaning: g.meaning)
@@ -146,8 +156,31 @@ extension StudyItem {
     func seedWord(in library: SeedLibrary) -> SeedWord {
         library.word(id: seedID) ?? SeedWord(
             id: seedID, korean: korean, kind: kind, meaning: meaning, definition: definition,
-            partOfSpeech: partOfSpeech, hanja: hanja, level: level, rank: 0
+            partOfSpeech: partOfSpeech, hanja: hanja, level: level, rank: 0, forms: forms
         )
+    }
+
+    /// Copies corrected facts from the bundled lists (meanings, forms, Hanja).
+    /// Returns true when anything changed.
+    @discardableResult
+    func syncFacts(from library: SeedLibrary) -> Bool {
+        guard kind != .grammar, let w = library.word(id: seedID), w.korean == korean else { return false }
+        var changed = false
+        func set<T: Equatable>(_ keyPath: ReferenceWritableKeyPath<StudyItem, T>, _ value: T) {
+            if self[keyPath: keyPath] != value {
+                self[keyPath: keyPath] = value
+                changed = true
+            }
+        }
+        set(\.meaning, w.meaning)
+        set(\.definition, w.definition)
+        set(\.partOfSpeech, w.partOfSpeech)
+        set(\.hanja, w.hanja)
+        if forms != w.forms {
+            forms = w.forms
+            changed = true
+        }
+        return changed
     }
 
     func grammarPattern(in library: SeedLibrary) -> GrammarPattern {

@@ -33,6 +33,16 @@ import Testing
         #expect(patterns.map(\.pattern) == [])
     }
 
+    @Test func verbsAndAdjectivesHaveForms() throws {
+        let library = try SeedLibrary.bundled()
+        let predicates = library.words.filter(\.isPredicate)
+        let missing = predicates.filter { $0.forms == nil }.map(\.korean)
+        #expect(missing.count < 20, "missing forms: \(missing.prefix(20))")
+        let eotteota = try #require(library.words.first { $0.korean == "어떻다" })
+        #expect(eotteota.forms == WordForms(polite: "어때요", politePast: "어땠어요", formal: "어떻습니다"))
+        #expect(!eotteota.meaning.contains("such"))
+    }
+
     @Test func placementPlanFromBundledData() throws {
         let plan = Placement.plan(library: try SeedLibrary.bundled())
         #expect(plan.words.count == 30)

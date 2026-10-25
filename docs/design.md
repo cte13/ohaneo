@@ -214,7 +214,7 @@ struct GrammarDetail: Codable {
 }
 ```
 
-- The store lives in an **App Group** container so the widgets can read it. Builds without a signing team fall back to the app's own container.
+- The store is meant to live in an **App Group** container so the widgets can read it. Phase 1 ships without the App Group entitlement (registering it needs Xcode's Signing & Capabilities pane), so the store and preferences live in the app's own container. When Phase 2 turns the App Group on, the first launch copies them into it.
 - **iCloud sync** later means turning on SwiftData's CloudKit option.
 
 ---

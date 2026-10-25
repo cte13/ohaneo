@@ -134,6 +134,32 @@ import Testing
         #expect(examples.allSatisfy { $0.hasValidHighlight })
     }
 
+    @Test func savedCardsPickUpCorrectedFactsAndNewContent() async throws {
+        let library = try SeedLibrary.bundled()
+        let word = try #require(library.words.first { $0.korean == "어떻다" })
+        // A card saved by an older build: old gloss, no forms, old AI content.
+        let old = StudyItem(seed: .word(word), library: library)
+        old.meaning = "such"
+        old.forms = nil
+        old.status = .new
+        old.scheduledFor = Calendar.current.startOfDay(for: clock.date)
+        old.examples = [Example(korean: "영화가 너무 어떻다!", english: "", highlight: "어떻다")]
+        old.generatedAt = clock.date
+        container.mainContext.insert(old)
+
+        service.refresh()
+        #expect(service.today?.id == old.id)
+        #expect(old.meaning == word.meaning)
+        #expect(old.forms?.polite == "어때요")
+
+        for _ in 0..<50 where old.contentVersion < StudyService.contentVersion {
+            try await Task.sleep(for: .milliseconds(20))
+        }
+        let examples = old.examples
+        #expect(old.contentVersion == StudyService.contentVersion)
+        #expect(examples.allSatisfy { $0.isValid(for: word) })
+    }
+
     @Test func selectionChangeDropsPreparedItems() throws {
         service.refresh()
         let prepared = Set(try allItems().filter { $0.status == .upcoming }.map(\.id))

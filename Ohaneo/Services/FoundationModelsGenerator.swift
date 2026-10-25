@@ -42,15 +42,25 @@ struct FoundationModelsGenerator: ContentGenerator {
         if let pos = word.partOfSpeech { prompt += "\nPart of speech: \(pos)" }
         if let definition = word.definition { prompt += "\nDictionary definition: \(definition)" }
         if let hanja = word.hanja { prompt += "\nHanja: \(hanja)" }
+        if let forms = word.forms {
+            prompt += """
+
+            Conjugated forms: \(forms.polite) (polite present), \(forms.politePast) (polite past), \(forms.formal) (formal).
+            This is a \(word.partOfSpeech ?? "verb"), so it must always be conjugated inside a sentence. \
+            Never write the dictionary form \(word.korean) inside a sentence.
+            """
+        }
         prompt += """
 
-        Write 2 example sentences that use the target with this meaning. \
+        Write 2 short, natural example sentences that use the target with exactly this meaning. \
         Where it sounds natural, reuse some of these words the learner already knows: \(vocabulary.joined(separator: ", ")).
         For each example, `highlight` must be copied exactly from the Korean sentence: the part where the target appears, \
         including any conjugation or particle attached to it.
-        Then write a short note on how and when Koreans use it, and a short memory hook.
+        Then write a short note on how Koreans use it: common situations and word pairings. \
+        Base the note only on the meaning given; don't invent extra meanings or feelings. \
+        Finally, a short memory hook.
         """
-        let response = try await session.respond(to: prompt, generating: GeneratedVocab.self, options: GenerationOptions(temperature: 0.7))
+        let response = try await session.respond(to: prompt, generating: GeneratedVocab.self, options: GenerationOptions(temperature: 0.5))
         let content = response.content
         return VocabContent(
             examples: content.examples.map(\.example),

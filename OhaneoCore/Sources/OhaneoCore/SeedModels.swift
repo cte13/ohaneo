@@ -56,6 +56,42 @@ public struct Example: Codable, Hashable, Sendable {
         guard let highlight, !highlight.isEmpty else { return false }
         return korean.contains(highlight)
     }
+
+    /// The highlight check, plus: a verb or adjective must be conjugated. Its
+    /// dictionary form (어떻다) may appear only when a Hangul ending follows,
+    /// as in quoted speech (어떻다고), never on its own (✗ 영화가 어떻다!).
+    public func isValid(for word: SeedWord) -> Bool {
+        guard hasValidHighlight else { return false }
+        guard word.isPredicate else { return true }
+        var searchStart = korean.startIndex
+        while let range = korean.range(of: word.korean, range: searchStart..<korean.endIndex) {
+            let next = range.upperBound < korean.endIndex ? korean[range.upperBound] : nil
+            if !(next.map(Example.isHangulSyllable) ?? false) { return false }
+            searchStart = range.upperBound
+        }
+        return true
+    }
+
+    static func isHangulSyllable(_ character: Character) -> Bool {
+        guard let scalar = character.unicodeScalars.first else { return false }
+        return (0xAC00...0xD7A3).contains(scalar.value)
+    }
+}
+
+/// Conjugated forms of a verb or adjective, from the bundled data.
+public struct WordForms: Codable, Hashable, Sendable {
+    /// 해요체 present, e.g. 어때요.
+    public var polite: String
+    /// 해요체 past, e.g. 어땠어요.
+    public var politePast: String
+    /// 합니다체 present, e.g. 어떻습니다.
+    public var formal: String
+
+    public init(polite: String, politePast: String, formal: String) {
+        self.polite = polite
+        self.politePast = politePast
+        self.formal = formal
+    }
 }
 
 /// A word or phrase from the bundled lists.
@@ -71,11 +107,18 @@ public struct SeedWord: Codable, Hashable, Sendable, Identifiable {
     /// Presentation order within its list. Lower comes first.
     public var rank: Int
     public var topics: [String]
+    /// Verbs and adjectives only.
+    public var forms: WordForms?
+
+    /// Verbs and adjectives, which must be conjugated inside a sentence.
+    public var isPredicate: Bool {
+        partOfSpeech == "verb" || partOfSpeech == "adjective"
+    }
 
     public init(
         id: String, korean: String, kind: ItemKind = .word, meaning: String,
         definition: String? = nil, partOfSpeech: String? = nil, hanja: String? = nil,
-        level: Level = .beginner, rank: Int, topics: [String] = []
+        level: Level = .beginner, rank: Int, topics: [String] = [], forms: WordForms? = nil
     ) {
         self.id = id
         self.korean = korean
@@ -87,6 +130,7 @@ public struct SeedWord: Codable, Hashable, Sendable, Identifiable {
         self.level = level
         self.rank = rank
         self.topics = topics
+        self.forms = forms
     }
 }
 

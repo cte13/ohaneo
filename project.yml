@@ -24,11 +24,6 @@ targets:
       - path: Ohaneo
     dependencies:
       - package: OhaneoCore
-    entitlements:
-      path: Ohaneo/Ohaneo.entitlements
-      properties:
-        com.apple.security.application-groups:
-          - group.dev.ohaneo.app
     info:
       path: Ohaneo/Info.plist
       properties:

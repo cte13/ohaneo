@@ -93,23 +93,36 @@ final class AppEnvironment {
         #endif
     }
 
-    /// The store lives in the App Group container so widgets can read it later.
+    /// The store lives in the App Group container when the build has one (so
+    /// widgets can read it later), otherwise in the app's own container. The
+    /// first launch with the App Group copies an existing local store into it.
     private static func makeContainer() -> ModelContainer {
         let schema = Schema([StudyItem.self, ChatMessage.self])
-        // Builds without a signing team (e.g. simulator) can't write to the App
-        // Group, so fall back to the app's own container when it isn't writable.
-        if let groupURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppGroup.identifier) {
-            let directory = groupURL.appending(path: "Library/Application Support", directoryHint: .isDirectory)
-            if (try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)) != nil,
-               FileManager.default.isWritableFile(atPath: directory.path(percentEncoded: false)) {
-                let shared = ModelConfiguration(schema: schema, url: directory.appending(path: "Study.store"), cloudKitDatabase: .none)
-                if let container = try? ModelContainer(for: schema, configurations: shared) {
-                    return container
+        let fileManager = FileManager.default
+        let localDirectory = URL.applicationSupportDirectory
+        try? fileManager.createDirectory(at: localDirectory, withIntermediateDirectories: true)
+        let localStore = localDirectory.appending(path: "Study.store")
+
+        if let groupDirectory = AppGroup.writableDirectory {
+            let groupStore = groupDirectory.appending(path: "Study.store")
+            if !fileManager.fileExists(atPath: groupStore.path(percentEncoded: false)),
+               fileManager.fileExists(atPath: localStore.path(percentEncoded: false)) {
+                for suffix in ["", "-shm", "-wal"] {
+                    let from = URL(filePath: localStore.path(percentEncoded: false) + suffix)
+                    let to = URL(filePath: groupStore.path(percentEncoded: false) + suffix)
+                    if fileManager.fileExists(atPath: from.path(percentEncoded: false)) {
+                        try? fileManager.copyItem(at: from, to: to)
+                    }
                 }
+            }
+            let shared = ModelConfiguration(schema: schema, url: groupStore, cloudKitDatabase: .none)
+            if let container = try? ModelContainer(for: schema, configurations: shared) {
+                return container
             }
         }
         do {
-            return try ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema, cloudKitDatabase: .none))
+            let local = ModelConfiguration(schema: schema, url: localStore, cloudKitDatabase: .none)
+            return try ModelContainer(for: schema, configurations: local)
         } catch {
             fatalError("Couldn't open the study store: \(error)")
         }
