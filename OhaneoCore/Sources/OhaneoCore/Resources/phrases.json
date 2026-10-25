@@ -1,0 +1,1843 @@
+{
+ "version": 1,
+ "source": "Curated for Ohaneo",
+ "items": [
+  {
+   "id": "p:1",
+   "korean": "그러게요",
+   "kind": "phrase",
+   "meaning": "I know, right? / Exactly (agreeing with what was just said)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 1,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:2",
+   "korean": "아, 맞다",
+   "kind": "phrase",
+   "meaning": "Oh, right! (suddenly remembering something)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 2,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:3",
+   "korean": "잠깐만요",
+   "kind": "phrase",
+   "meaning": "Just a moment / Excuse me (to get past or to pause someone)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 3,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:4",
+   "korean": "어쩐지",
+   "kind": "phrase",
+   "meaning": "No wonder / That explains it",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 4,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:5",
+   "korean": "그렇군요",
+   "kind": "phrase",
+   "meaning": "I see (accepting new information)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 5,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:6",
+   "korean": "그럼요",
+   "kind": "phrase",
+   "meaning": "Of course",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 6,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:7",
+   "korean": "별말씀을요",
+   "kind": "phrase",
+   "meaning": "Don't mention it (polite reply to thanks or praise)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 7,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:8",
+   "korean": "덕분에요",
+   "kind": "phrase",
+   "meaning": "Thanks to you (polite reply when asked how things went)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 8,
+   "topics": [
+    "daily",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:9",
+   "korean": "어쩔 수 없죠",
+   "kind": "phrase",
+   "meaning": "It can't be helped",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 9,
+   "topics": [
+    "daily",
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:10",
+   "korean": "말도 안 돼",
+   "kind": "phrase",
+   "meaning": "No way / That makes no sense (casual)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 10,
+   "topics": [
+    "daily",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:11",
+   "korean": "그럴 리가요",
+   "kind": "phrase",
+   "meaning": "That can't be / There's no way that's true",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 11,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:12",
+   "korean": "신경 쓰지 마세요",
+   "kind": "phrase",
+   "meaning": "Don't worry about it / Never mind",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 12,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:13",
+   "korean": "괜찮아요",
+   "kind": "phrase",
+   "meaning": "It's okay / I'm fine / No thank you (declining politely)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 13,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:14",
+   "korean": "그냥요",
+   "kind": "phrase",
+   "meaning": "Just because / No particular reason",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 14,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:15",
+   "korean": "글쎄요",
+   "kind": "phrase",
+   "meaning": "Well… / I'm not sure (hesitating)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 15,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:16",
+   "korean": "설마",
+   "kind": "phrase",
+   "meaning": "No way… / Surely not (expecting it isn't true)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 16,
+   "topics": [
+    "daily",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:17",
+   "korean": "역시",
+   "kind": "phrase",
+   "meaning": "As expected / I knew it",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 17,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:18",
+   "korean": "어떡해",
+   "kind": "phrase",
+   "meaning": "What do I do? / Oh no (casual; polite: 어떡해요)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 18,
+   "topics": [
+    "feelings",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:19",
+   "korean": "깜짝이야",
+   "kind": "phrase",
+   "meaning": "You scared me! / What a surprise",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 19,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:20",
+   "korean": "다행이다",
+   "kind": "phrase",
+   "meaning": "What a relief / That's lucky",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 20,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:21",
+   "korean": "큰일 났다",
+   "kind": "phrase",
+   "meaning": "I'm in big trouble / This is a disaster",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 21,
+   "topics": [
+    "feelings",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:22",
+   "korean": "아깝다",
+   "kind": "phrase",
+   "meaning": "What a waste / So close (regret over a missed chance or waste)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 22,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:23",
+   "korean": "대박",
+   "kind": "phrase",
+   "meaning": "Awesome / Wow (casual slang for something amazing)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 23,
+   "topics": [
+    "daily",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:24",
+   "korean": "진짜요?",
+   "kind": "phrase",
+   "meaning": "Really?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 24,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:25",
+   "korean": "그렇죠",
+   "kind": "phrase",
+   "meaning": "That's right / Exactly (agreeing)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 25,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:26",
+   "korean": "아무거나요",
+   "kind": "phrase",
+   "meaning": "Anything is fine",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 26,
+   "topics": [
+    "daily",
+    "food"
+   ]
+  },
+  {
+   "id": "p:27",
+   "korean": "잘됐네요",
+   "kind": "phrase",
+   "meaning": "That's great / I'm glad it worked out",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 27,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:28",
+   "korean": "어서 오세요",
+   "kind": "phrase",
+   "meaning": "Welcome (said by staff when customers come in)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 28,
+   "topics": [
+    "shopping",
+    "food"
+   ]
+  },
+  {
+   "id": "p:29",
+   "korean": "수고하세요",
+   "kind": "phrase",
+   "meaning": "Said when leaving people who are still working (shop staff, colleagues)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 29,
+   "topics": [
+    "daily",
+    "work"
+   ]
+  },
+  {
+   "id": "p:30",
+   "korean": "수고하셨습니다",
+   "kind": "phrase",
+   "meaning": "Thank you for your hard work (said at the end of work or a task)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 30,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:31",
+   "korean": "고생 많으셨어요",
+   "kind": "phrase",
+   "meaning": "You've been through a lot / Thank you for all your effort",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 31,
+   "topics": [
+    "work",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:32",
+   "korean": "잘 먹겠습니다",
+   "kind": "phrase",
+   "meaning": "Said before eating, thanking whoever made or paid for the meal",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 32,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:33",
+   "korean": "잘 먹었습니다",
+   "kind": "phrase",
+   "meaning": "Said after eating, thanking whoever made or paid for the meal",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 33,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:34",
+   "korean": "많이 드세요",
+   "kind": "phrase",
+   "meaning": "Please eat a lot / Enjoy your meal (said by the host)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 34,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:35",
+   "korean": "맛있게 드세요",
+   "kind": "phrase",
+   "meaning": "Enjoy your meal (often said by restaurant staff)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 35,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:36",
+   "korean": "여기요",
+   "kind": "phrase",
+   "meaning": "Excuse me! (calling staff in a restaurant)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 36,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:37",
+   "korean": "계산해 주세요",
+   "kind": "phrase",
+   "meaning": "The bill, please",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 37,
+   "topics": [
+    "food",
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:38",
+   "korean": "포장해 주세요",
+   "kind": "phrase",
+   "meaning": "To go, please / Please wrap it up",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 38,
+   "topics": [
+    "food",
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:39",
+   "korean": "덜 맵게 해 주세요",
+   "kind": "phrase",
+   "meaning": "Please make it less spicy",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 39,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:40",
+   "korean": "한 번 더 말씀해 주시겠어요?",
+   "kind": "phrase",
+   "meaning": "Could you say that once more?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 40,
+   "topics": [
+    "daily",
+    "travel"
+   ]
+  },
+  {
+   "id": "p:41",
+   "korean": "천천히 말해 주세요",
+   "kind": "phrase",
+   "meaning": "Please speak slowly",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 41,
+   "topics": [
+    "daily",
+    "travel"
+   ]
+  },
+  {
+   "id": "p:42",
+   "korean": "이거 얼마예요?",
+   "kind": "phrase",
+   "meaning": "How much is this?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 42,
+   "topics": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:43",
+   "korean": "좀 깎아 주세요",
+   "kind": "phrase",
+   "meaning": "Please give me a discount",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 43,
+   "topics": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:44",
+   "korean": "그냥 구경하는 거예요",
+   "kind": "phrase",
+   "meaning": "I'm just looking",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 44,
+   "topics": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:45",
+   "korean": "입어 봐도 돼요?",
+   "kind": "phrase",
+   "meaning": "Can I try it on?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 45,
+   "topics": [
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:46",
+   "korean": "화장실이 어디예요?",
+   "kind": "phrase",
+   "meaning": "Where is the restroom?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 46,
+   "topics": [
+    "travel"
+   ]
+  },
+  {
+   "id": "p:47",
+   "korean": "여기서 내려 주세요",
+   "kind": "phrase",
+   "meaning": "Please let me off here (to a taxi driver)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 47,
+   "topics": [
+    "travel"
+   ]
+  },
+  {
+   "id": "p:48",
+   "korean": "길을 잃었어요",
+   "kind": "phrase",
+   "meaning": "I'm lost",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 48,
+   "topics": [
+    "travel"
+   ]
+  },
+  {
+   "id": "p:49",
+   "korean": "몸조심하세요",
+   "kind": "phrase",
+   "meaning": "Take care of yourself (often when someone is ill or travelling)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 49,
+   "topics": [
+    "health",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:50",
+   "korean": "빨리 나으세요",
+   "kind": "phrase",
+   "meaning": "Get well soon",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 50,
+   "topics": [
+    "health"
+   ]
+  },
+  {
+   "id": "p:51",
+   "korean": "푹 쉬세요",
+   "kind": "phrase",
+   "meaning": "Get plenty of rest",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 51,
+   "topics": [
+    "health"
+   ]
+  },
+  {
+   "id": "p:52",
+   "korean": "좋은 하루 보내세요",
+   "kind": "phrase",
+   "meaning": "Have a nice day",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 52,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:53",
+   "korean": "주말 잘 보내세요",
+   "kind": "phrase",
+   "meaning": "Have a good weekend",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 53,
+   "topics": [
+    "daily",
+    "work"
+   ]
+  },
+  {
+   "id": "p:54",
+   "korean": "새해 복 많이 받으세요",
+   "kind": "phrase",
+   "meaning": "Happy New Year (literally: receive many blessings)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 54,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:55",
+   "korean": "오랜만이에요",
+   "kind": "phrase",
+   "meaning": "Long time no see",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 55,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:56",
+   "korean": "잘 지냈어요?",
+   "kind": "phrase",
+   "meaning": "How have you been?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 56,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:57",
+   "korean": "말 놓으세요",
+   "kind": "phrase",
+   "meaning": "Please speak casually to me (inviting someone to drop polite speech)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 57,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:58",
+   "korean": "말 놓아도 돼요?",
+   "kind": "phrase",
+   "meaning": "Can I speak casually with you?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 58,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:59",
+   "korean": "연락할게요",
+   "kind": "phrase",
+   "meaning": "I'll get in touch",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 59,
+   "topics": [
+    "relationships",
+    "work"
+   ]
+  },
+  {
+   "id": "p:60",
+   "korean": "나중에 밥 한번 먹어요",
+   "kind": "phrase",
+   "meaning": "Let's grab a meal sometime (often a friendly goodbye, not a firm plan)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 60,
+   "topics": [
+    "relationships",
+    "food"
+   ]
+  },
+  {
+   "id": "p:61",
+   "korean": "잘 부탁드립니다",
+   "kind": "phrase",
+   "meaning": "I look forward to working with you / Please take care of this (said when starting something together)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 61,
+   "topics": [
+    "work",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:62",
+   "korean": "처음 뵙겠습니다",
+   "kind": "phrase",
+   "meaning": "Nice to meet you (formal, first meeting)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 62,
+   "topics": [
+    "work",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:63",
+   "korean": "말씀 많이 들었어요",
+   "kind": "phrase",
+   "meaning": "I've heard a lot about you",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 63,
+   "topics": [
+    "relationships",
+    "work"
+   ]
+  },
+  {
+   "id": "p:64",
+   "korean": "실례지만",
+   "kind": "phrase",
+   "meaning": "Excuse me, but… (before a personal question or request)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 64,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:65",
+   "korean": "죄송한데요",
+   "kind": "phrase",
+   "meaning": "Sorry, but… (softening a request or interruption)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 65,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:66",
+   "korean": "혹시",
+   "kind": "phrase",
+   "meaning": "By any chance… (softens a question)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 66,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:67",
+   "korean": "일단",
+   "kind": "phrase",
+   "meaning": "First of all / For now",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 67,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:68",
+   "korean": "아무튼",
+   "kind": "phrase",
+   "meaning": "Anyway",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 68,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:69",
+   "korean": "그건 그렇고",
+   "kind": "phrase",
+   "meaning": "By the way / Anyway (changing the subject)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 69,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:70",
+   "korean": "솔직히 말하면",
+   "kind": "phrase",
+   "meaning": "To be honest",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 70,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:71",
+   "korean": "제 말이요",
+   "kind": "phrase",
+   "meaning": "That's what I'm saying / Exactly",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 71,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:72",
+   "korean": "어떻게 알았어요?",
+   "kind": "phrase",
+   "meaning": "How did you know?",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 72,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:73",
+   "korean": "그럴 줄 알았어",
+   "kind": "phrase",
+   "meaning": "I knew it (casual)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 73,
+   "topics": [
+    "daily",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:74",
+   "korean": "됐어요",
+   "kind": "phrase",
+   "meaning": "That's enough / Never mind / No thanks (can sound cold)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 74,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:75",
+   "korean": "잘했어요",
+   "kind": "phrase",
+   "meaning": "Well done",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 75,
+   "topics": [
+    "daily",
+    "school"
+   ]
+  },
+  {
+   "id": "p:76",
+   "korean": "힘내세요",
+   "kind": "phrase",
+   "meaning": "Cheer up / Keep going (encouragement)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 76,
+   "topics": [
+    "feelings",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:77",
+   "korean": "파이팅",
+   "kind": "phrase",
+   "meaning": "You can do it! / Let's go! (encouragement)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 77,
+   "topics": [
+    "daily",
+    "school"
+   ]
+  },
+  {
+   "id": "p:78",
+   "korean": "축하해요",
+   "kind": "phrase",
+   "meaning": "Congratulations",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 78,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:79",
+   "korean": "기대돼요",
+   "kind": "phrase",
+   "meaning": "I'm looking forward to it",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 79,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:80",
+   "korean": "심심해요",
+   "kind": "phrase",
+   "meaning": "I'm bored",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 80,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:81",
+   "korean": "배고파 죽겠어요",
+   "kind": "phrase",
+   "meaning": "I'm starving (literally: so hungry I could die)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 81,
+   "topics": [
+    "food",
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:82",
+   "korean": "피곤해 죽겠어요",
+   "kind": "phrase",
+   "meaning": "I'm exhausted",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 82,
+   "topics": [
+    "feelings",
+    "health"
+   ]
+  },
+  {
+   "id": "p:83",
+   "korean": "정신이 없어요",
+   "kind": "phrase",
+   "meaning": "I'm swamped / My head is all over the place",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 83,
+   "topics": [
+    "work",
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:84",
+   "korean": "시간 가는 줄 몰랐어요",
+   "kind": "phrase",
+   "meaning": "I lost track of time",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 84,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:85",
+   "korean": "마음에 들어요",
+   "kind": "phrase",
+   "meaning": "I like it (it suits my taste)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 85,
+   "topics": [
+    "shopping",
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:86",
+   "korean": "상관없어요",
+   "kind": "phrase",
+   "meaning": "It doesn't matter / I don't mind",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 86,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:87",
+   "korean": "어디 보자",
+   "kind": "phrase",
+   "meaning": "Let me see…",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 87,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:88",
+   "korean": "오늘은 제가 살게요",
+   "kind": "phrase",
+   "meaning": "Today is on me (I'll pay)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 88,
+   "topics": [
+    "food",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:89",
+   "korean": "한턱낼게요",
+   "kind": "phrase",
+   "meaning": "I'll treat you (usually to celebrate good news)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 89,
+   "topics": [
+    "food",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:90",
+   "korean": "건배",
+   "kind": "phrase",
+   "meaning": "Cheers!",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "beginner",
+   "rank": 90,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:91",
+   "korean": "원샷",
+   "kind": "phrase",
+   "meaning": "Bottoms up (drink it all in one go)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 91,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:92",
+   "korean": "2차 가요",
+   "kind": "phrase",
+   "meaning": "Let's go to a second place (another bar or restaurant after the first)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 92,
+   "topics": [
+    "food",
+    "work"
+   ]
+  },
+  {
+   "id": "p:93",
+   "korean": "회식",
+   "kind": "phrase",
+   "meaning": "A team dinner or drinks with colleagues",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 93,
+   "topics": [
+    "work",
+    "food"
+   ]
+  },
+  {
+   "id": "p:94",
+   "korean": "칼퇴근",
+   "kind": "phrase",
+   "meaning": "Leaving work exactly on time",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 94,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:95",
+   "korean": "야근",
+   "kind": "phrase",
+   "meaning": "Working late / overtime at night",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 95,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:96",
+   "korean": "밀당",
+   "kind": "phrase",
+   "meaning": "Push and pull in dating (playing hard to get)",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 96,
+   "topics": [
+    "relationships",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:97",
+   "korean": "썸 타다",
+   "kind": "phrase",
+   "meaning": "To be in a 'something' — mutual interest before officially dating",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 97,
+   "topics": [
+    "relationships",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:98",
+   "korean": "첫눈에 반하다",
+   "kind": "phrase",
+   "meaning": "To fall in love at first sight",
+   "definition": null,
+   "partOfSpeech": "expression",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 98,
+   "topics": [
+    "relationships",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:99",
+   "korean": "손이 크다",
+   "kind": "phrase",
+   "meaning": "To be generous (especially cooking or giving too much); literally 'hand is big'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 99,
+   "topics": [
+    "food",
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:100",
+   "korean": "발이 넓다",
+   "kind": "phrase",
+   "meaning": "To know a lot of people; literally 'feet are wide'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 100,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:101",
+   "korean": "눈치가 빠르다",
+   "kind": "phrase",
+   "meaning": "To be quick to read the room / pick up on unspoken cues",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 101,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:102",
+   "korean": "눈치를 보다",
+   "kind": "phrase",
+   "meaning": "To watch others' reactions and act carefully around them",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 102,
+   "topics": [
+    "relationships",
+    "work"
+   ]
+  },
+  {
+   "id": "p:103",
+   "korean": "입이 짧다",
+   "kind": "phrase",
+   "meaning": "To be a picky or light eater; literally 'mouth is short'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 103,
+   "topics": [
+    "food"
+   ]
+  },
+  {
+   "id": "p:104",
+   "korean": "입이 무겁다",
+   "kind": "phrase",
+   "meaning": "To be good at keeping secrets; literally 'mouth is heavy'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 104,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:105",
+   "korean": "입이 가볍다",
+   "kind": "phrase",
+   "meaning": "To be unable to keep secrets; literally 'mouth is light'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 105,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:106",
+   "korean": "귀가 얇다",
+   "kind": "phrase",
+   "meaning": "To be easily persuaded; literally 'ears are thin'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 106,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:107",
+   "korean": "얼굴이 두껍다",
+   "kind": "phrase",
+   "meaning": "To be shameless / thick-skinned",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 107,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:108",
+   "korean": "눈이 높다",
+   "kind": "phrase",
+   "meaning": "To have high standards (in partners, products…)",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 108,
+   "topics": [
+    "relationships",
+    "shopping"
+   ]
+  },
+  {
+   "id": "p:109",
+   "korean": "마음이 넓다",
+   "kind": "phrase",
+   "meaning": "To be generous and understanding",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 109,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:110",
+   "korean": "배가 아프다",
+   "kind": "phrase",
+   "meaning": "To be jealous of someone's success (also literally 'stomach hurts')",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 110,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:111",
+   "korean": "손을 떼다",
+   "kind": "phrase",
+   "meaning": "To quit / wash one's hands of something",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 111,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:112",
+   "korean": "머리를 식히다",
+   "kind": "phrase",
+   "meaning": "To clear one's head / take a break",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 112,
+   "topics": [
+    "feelings",
+    "health"
+   ]
+  },
+  {
+   "id": "p:113",
+   "korean": "바람맞다",
+   "kind": "phrase",
+   "meaning": "To be stood up",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 113,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:114",
+   "korean": "미역국을 먹다",
+   "kind": "phrase",
+   "meaning": "To fail (an exam or application); literally 'eat seaweed soup'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 114,
+   "topics": [
+    "school"
+   ]
+  },
+  {
+   "id": "p:115",
+   "korean": "시치미를 떼다",
+   "kind": "phrase",
+   "meaning": "To pretend not to know / play innocent",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "advanced",
+   "rank": 115,
+   "topics": [
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:116",
+   "korean": "발 벗고 나서다",
+   "kind": "phrase",
+   "meaning": "To actively step in to help",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "advanced",
+   "rank": 116,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:117",
+   "korean": "가슴이 뛰다",
+   "kind": "phrase",
+   "meaning": "Heart races (excitement or nerves)",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 117,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:118",
+   "korean": "어깨가 무겁다",
+   "kind": "phrase",
+   "meaning": "To feel a heavy responsibility",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 118,
+   "topics": [
+    "work",
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:119",
+   "korean": "코가 납작해지다",
+   "kind": "phrase",
+   "meaning": "To be humbled / have one's pride crushed",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "advanced",
+   "rank": 119,
+   "topics": [
+    "feelings"
+   ]
+  },
+  {
+   "id": "p:120",
+   "korean": "뒤통수를 맞다",
+   "kind": "phrase",
+   "meaning": "To be betrayed; literally 'get hit on the back of the head'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 120,
+   "topics": [
+    "relationships",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:121",
+   "korean": "눈에 밟히다",
+   "kind": "phrase",
+   "meaning": "Can't stop thinking about someone or something (worry or longing)",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "advanced",
+   "rank": 121,
+   "topics": [
+    "feelings",
+    "kdrama"
+   ]
+  },
+  {
+   "id": "p:122",
+   "korean": "손발이 맞다",
+   "kind": "phrase",
+   "meaning": "To work well together",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 122,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:123",
+   "korean": "발등에 불이 떨어지다",
+   "kind": "phrase",
+   "meaning": "To be in an urgent situation; literally 'fire falls on the top of your foot'",
+   "definition": null,
+   "partOfSpeech": "idiom",
+   "hanja": null,
+   "level": "advanced",
+   "rank": 123,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:124",
+   "korean": "세 살 버릇 여든까지 간다",
+   "kind": "phrase",
+   "meaning": "Old habits die hard; literally 'habits at three last until eighty'",
+   "definition": null,
+   "partOfSpeech": "proverb",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 124,
+   "topics": [
+    "daily"
+   ]
+  },
+  {
+   "id": "p:125",
+   "korean": "가는 말이 고와야 오는 말이 곱다",
+   "kind": "phrase",
+   "meaning": "Be kind to others and they'll be kind to you; literally 'outgoing words must be nice for incoming words to be nice'",
+   "definition": null,
+   "partOfSpeech": "proverb",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 125,
+   "topics": [
+    "relationships"
+   ]
+  },
+  {
+   "id": "p:126",
+   "korean": "금강산도 식후경",
+   "kind": "phrase",
+   "meaning": "Eat first, then everything else; literally 'even Mt. Geumgang is sightseeing after a meal'",
+   "definition": null,
+   "partOfSpeech": "proverb",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 126,
+   "topics": [
+    "food",
+    "travel"
+   ]
+  },
+  {
+   "id": "p:127",
+   "korean": "백지장도 맞들면 낫다",
+   "kind": "phrase",
+   "meaning": "Many hands make light work; literally 'even a sheet of paper is easier lifted together'",
+   "definition": null,
+   "partOfSpeech": "proverb",
+   "hanja": null,
+   "level": "advanced",
+   "rank": 127,
+   "topics": [
+    "work"
+   ]
+  },
+  {
+   "id": "p:128",
+   "korean": "누워서 떡 먹기",
+   "kind": "phrase",
+   "meaning": "A piece of cake; literally 'eating rice cake lying down'",
+   "definition": null,
+   "partOfSpeech": "proverb",
+   "hanja": null,
+   "level": "intermediate",
+   "rank": 128,
+   "topics": [
+    "daily"
+   ]
+  }
+ ]
+}
