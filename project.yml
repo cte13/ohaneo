@@ -1,0 +1,78 @@
+name: Ohaneo
+options:
+  bundleIdPrefix: dev.ohaneo
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_STRICT_CONCURRENCY: complete
+packages:
+  OhaneoCore:
+    path: OhaneoCore
+targets:
+  Ohaneo:
+    type: application
+    platform: iOS
+    sources:
+      - path: Ohaneo
+    dependencies:
+      - package: OhaneoCore
+    entitlements:
+      path: Ohaneo/Ohaneo.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.dev.ohaneo.app
+    info:
+      path: Ohaneo/Info.plist
+      properties:
+        CFBundleDisplayName: 오한어
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIColorName: Paper
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIAppFonts:
+          - GowunBatang-Regular.ttf
+          - GowunBatang-Bold.ttf
+        AppGroupIdentifier: group.dev.ohaneo.app
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ohaneo.app
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+  OhaneoTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: OhaneoTests
+    dependencies:
+      - target: Ohaneo
+      - package: OhaneoCore
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: $(TEST_HOST)
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/Ohaneo.app/Ohaneo
+schemes:
+  Ohaneo:
+    build:
+      targets:
+        Ohaneo: all
+        OhaneoTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - OhaneoTests
+        - package: OhaneoCore/OhaneoCoreTests

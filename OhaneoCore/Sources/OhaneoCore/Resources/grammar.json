@@ -1,0 +1,2101 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "id": "g:ayo",
+   "pattern": "-아/어요",
+   "meaning": "polite informal sentence ending (present)",
+   "level": "beginner",
+   "order": 10,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어요",
+     "example": "가요 / 먹어요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-아/어요",
+     "example": "좋아요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이에요/예요",
+     "example": "학생이에요 / 의사예요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었어요",
+     "example": "갔어요"
+    }
+   ],
+   "register": "The everyday polite style used with most adults.",
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:seumnida",
+   "pattern": "-(스)ㅂ니다",
+   "meaning": "formal polite sentence ending",
+   "level": "beginner",
+   "order": 20,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(스)ㅂ니다",
+     "example": "갑니다 / 먹습니다"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(스)ㅂ니다",
+     "example": "좋습니다"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "입니다",
+     "example": "학생입니다"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었습니다",
+     "example": "갔습니다"
+    }
+   ],
+   "register": "Formal: news, announcements, presentations, the military, first meetings at work.",
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:at",
+   "pattern": "-았/었-",
+   "meaning": "past tense",
+   "level": "beginner",
+   "order": 30,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-았/었-",
+     "example": "갔어요 / 먹었어요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-았/었-",
+     "example": "좋았어요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이었/였-",
+     "example": "학생이었어요 / 의사였어요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:go",
+   "pattern": "-고",
+   "meaning": "and (links actions or descriptions)",
+   "level": "beginner",
+   "order": 40,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-고",
+     "example": "먹고"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-고",
+     "example": "싸고"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이고",
+     "example": "학생이고"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었고",
+     "example": "갔고"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:go-sipda",
+   "pattern": "-고 싶다",
+   "meaning": "want to do",
+   "level": "beginner",
+   "order": 50,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-고 싶다",
+     "example": "가고 싶어요"
+    }
+   ],
+   "register": "For someone else's wish, use -고 싶어하다: 동생이 가고 싶어해요.",
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:an",
+   "pattern": "안 / -지 않다",
+   "meaning": "not (negation)",
+   "level": "beginner",
+   "order": 60,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "안 + verb / -지 않다",
+     "example": "안 가요 / 가지 않아요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "안 + adjective / -지 않다",
+     "example": "안 좋아요 / 좋지 않아요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:mot",
+   "pattern": "못 / -지 못하다",
+   "meaning": "can't (lack of ability or circumstances prevent it)",
+   "level": "beginner",
+   "order": 70,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "못 + verb / -지 못하다",
+     "example": "못 가요 / 가지 못해요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:euseyo",
+   "pattern": "-(으)세요",
+   "meaning": "polite request, or honorific present",
+   "level": "beginner",
+   "order": 80,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)세요",
+     "example": "가세요 / 읽으세요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)세요",
+     "example": "바쁘세요?"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)세요",
+     "example": "선생님이세요?"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-geoyeyo",
+   "pattern": "-(으)ㄹ 거예요",
+   "meaning": "future plan or guess",
+   "level": "beginner",
+   "order": 90,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 거예요",
+     "example": "갈 거예요 / 먹을 거예요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄹ 거예요",
+     "example": "좋을 거예요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "일 거예요",
+     "example": "학생일 거예요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:go-itda",
+   "pattern": "-고 있다",
+   "meaning": "be doing (action in progress)",
+   "level": "beginner",
+   "order": 100,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-고 있다",
+     "example": "먹고 있어요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-su-itda",
+   "pattern": "-(으)ㄹ 수 있다/없다",
+   "meaning": "can / can't",
+   "level": "beginner",
+   "order": 110,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 수 있다/없다",
+     "example": "갈 수 있어요 / 먹을 수 없어요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:aya-hada",
+   "pattern": "-아/어야 하다/되다",
+   "meaning": "have to, must",
+   "level": "beginner",
+   "order": 120,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어야 하다",
+     "example": "가야 해요 / 먹어야 돼요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-아/어야 하다",
+     "example": "커야 해요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이어야/여야 하다",
+     "example": "학생이어야 해요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:jiman",
+   "pattern": "-지만",
+   "meaning": "but",
+   "level": "beginner",
+   "order": 130,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-지만",
+     "example": "가지만"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-지만",
+     "example": "좋지만"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이지만",
+     "example": "학생이지만"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었지만",
+     "example": "갔지만"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eureo",
+   "pattern": "-(으)러 가다/오다",
+   "meaning": "go/come in order to do",
+   "level": "beginner",
+   "order": 140,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)러 가다",
+     "example": "먹으러 가요 / 보러 와요"
+    }
+   ],
+   "register": "Only with movement verbs such as 가다, 오다, 다니다.",
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eumyeon",
+   "pattern": "-(으)면",
+   "meaning": "if, when",
+   "level": "beginner",
+   "order": 150,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)면",
+     "example": "가면 / 먹으면"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)면",
+     "example": "좋으면"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)면",
+     "example": "학생이면"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eulgeyo",
+   "pattern": "-(으)ㄹ게요",
+   "meaning": "I'll do it (promise or decision, considering the listener)",
+   "level": "beginner",
+   "order": 160,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ게요",
+     "example": "갈게요 / 먹을게요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eulkkayo",
+   "pattern": "-(으)ㄹ까요?",
+   "meaning": "shall we…? / do you think…?",
+   "level": "beginner",
+   "order": 170,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ까요?",
+     "example": "갈까요? / 먹을까요?"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄹ까요?",
+     "example": "좋을까요?"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:a-juda",
+   "pattern": "-아/어 주다",
+   "meaning": "do something for someone",
+   "level": "beginner",
+   "order": 180,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어 주다",
+     "example": "기다려 주세요 / 써 주세요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:modifier",
+   "pattern": "-는 / -(으)ㄴ / -(으)ㄹ",
+   "meaning": "noun modifiers: turn a verb or adjective into a description of a noun",
+   "level": "beginner",
+   "order": 190,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 (present)",
+     "example": "가는 사람"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄴ",
+     "example": "좋은 사람"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "인",
+     "example": "학생인 친구"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-(으)ㄴ (verbs)",
+     "example": "간 사람"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:ji-maseyo",
+   "pattern": "-지 마세요",
+   "meaning": "please don't",
+   "level": "beginner",
+   "order": 200,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-지 마세요",
+     "example": "가지 마세요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eupsida",
+   "pattern": "-(으)ㅂ시다",
+   "meaning": "let's (polite but not for seniors)",
+   "level": "beginner",
+   "order": 210,
+   "prerequisites": [],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㅂ시다",
+     "example": "갑시다 / 먹읍시다"
+    }
+   ],
+   "register": "Can sound like an order to someone older or senior; use -(으)ㄹ까요? or -(으)시죠 instead.",
+   "commonMistake": null,
+   "assumedKnown": true,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:aseo-sequence",
+   "pattern": "-아/어서",
+   "meaning": "sequence: do A, then do B (B builds on A: same place or same object)",
+   "level": "beginner",
+   "order": 300,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:go",
+     "note": "-고 simply lists actions; -아/어서 links them so the second happens at the place or with the thing from the first (친구를 만나서 밥을 먹었어요)."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어서",
+     "example": "가서 / 만들어서"
+    }
+   ],
+   "register": "Neutral; very common in speech and writing.",
+   "commonMistake": "Tense goes only on the last verb: ✗ 학교에 갔어서 공부했어요 → ✓ 학교에 가서 공부했어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:aseo-reason",
+   "pattern": "-아/어서",
+   "meaning": "reason: because, so (cause leading to a result)",
+   "level": "beginner",
+   "order": 310,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eunikka",
+     "note": "-(으)니까 can be followed by a request or suggestion; -아/어서 can't."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어서",
+     "example": "늦어서"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-아/어서",
+     "example": "바빠서"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)라서 / 이어서/여서",
+     "example": "학생이라서 / 의사여서"
+    }
+   ],
+   "register": "The natural choice for apologies and thanks: 늦어서 죄송합니다, 도와줘서 고마워요.",
+   "commonMistake": "No past tense before it, and no command after it: ✗ 비가 와서 우산을 가져가세요 → ✓ 비가 오니까 우산을 가져가세요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eunikka",
+   "pattern": "-(으)니까",
+   "meaning": "because, since (often a reason the speaker wants to stress)",
+   "level": "beginner",
+   "order": 320,
+   "prerequisites": [
+    "g:aseo-reason"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:aseo-reason",
+     "note": "-아/어서 states a cause neutrally and can't take a command after it; -(으)니까 can (추우니까 창문 닫으세요)."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)니까",
+     "example": "가니까 / 먹으니까"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)니까",
+     "example": "바쁘니까"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)니까",
+     "example": "학생이니까"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었으니까",
+     "example": "갔으니까"
+    }
+   ],
+   "register": "With a verb of action it can also mean 'when I did A, I found B': 집에 가니까 아무도 없었어요.",
+   "commonMistake": "Avoid it in apologies: ✗ 늦었으니까 죄송합니다 → ✓ 늦어서 죄송합니다.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:gi-jeone",
+   "pattern": "-기 전에",
+   "meaning": "before doing",
+   "level": "beginner",
+   "order": 330,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eun-hue",
+     "note": "-(으)ㄴ 후에 is the opposite: after doing."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-기 전에",
+     "example": "자기 전에"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "전에",
+     "example": "수업 전에"
+    }
+   ],
+   "register": null,
+   "commonMistake": "No tense before -기: ✗ 잤기 전에 → ✓ 자기 전에.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eun-hue",
+   "pattern": "-(으)ㄴ 후에",
+   "meaning": "after doing",
+   "level": "beginner",
+   "order": 340,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:gi-jeone",
+     "note": "-기 전에 is the opposite: before doing."
+    },
+    {
+     "patternID": "g:go-naseo",
+     "note": "-고 나서 means much the same but stresses finishing A first."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄴ 후에",
+     "example": "먹은 후에 / 간 후에"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "후에",
+     "example": "수업 후에"
+    }
+   ],
+   "register": "-(으)ㄴ 다음에 and -(으)ㄴ 뒤에 mean the same.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:go-naseo",
+   "pattern": "-고 나서",
+   "meaning": "after finishing A, then B",
+   "level": "beginner",
+   "order": 345,
+   "prerequisites": [
+    "g:go"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eun-hue",
+     "note": "-(으)ㄴ 후에 is a neutral 'after'; -고 나서 stresses that A is completely done."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-고 나서",
+     "example": "먹고 나서"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:a-boda",
+   "pattern": "-아/어 보다",
+   "meaning": "try doing; in the past, have done (experience)",
+   "level": "beginner",
+   "order": 350,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어 보다",
+     "example": "먹어 보세요 / 가 봤어요"
+    }
+   ],
+   "register": "Very common in polite suggestions: 한번 입어 보세요.",
+   "commonMistake": "In the past it means experience, not just an attempt: 가 봤어요 = I've been there.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eun-jeogi-itda",
+   "pattern": "-(으)ㄴ 적이 있다/없다",
+   "meaning": "have (never) done something before",
+   "level": "beginner",
+   "order": 360,
+   "prerequisites": [
+    "g:modifier",
+    "g:a-boda"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:a-boda",
+     "note": "Often combined: -아/어 본 적이 있다 is the most natural way to say 'have tried'."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄴ 적이 있다",
+     "example": "먹은 적이 있어요 / 가 본 적이 없어요"
+    }
+   ],
+   "register": null,
+   "commonMistake": "Not for routine things: ✗ 밥을 먹은 적이 있어요 sounds like eating rice is a rare event.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neyo",
+   "pattern": "-네요",
+   "meaning": "oh, …! (reacting to something you just noticed)",
+   "level": "beginner",
+   "order": 370,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:gunyo",
+     "note": "-군요 also marks realization but sounds more formal or written; -네요 is the everyday spoken choice."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-네요",
+     "example": "비가 오네요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-네요",
+     "example": "좋네요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)네요",
+     "example": "학생이네요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었네요",
+     "example": "왔네요"
+    }
+   ],
+   "register": null,
+   "commonMistake": "ㄹ drops before ㄴ: ✗ 멀네요 → ✓ 머네요; ✗ 살네요 → ✓ 사네요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:jiyo",
+   "pattern": "-지요 (-죠)",
+   "meaning": "…, right? (checking or stating something the listener should agree with)",
+   "level": "beginner",
+   "order": 380,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-지요",
+     "example": "가죠?"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-지요",
+     "example": "좋죠?"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)지요",
+     "example": "학생이죠?"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었지요",
+     "example": "갔죠?"
+    }
+   ],
+   "register": "In speech it is almost always shortened to -죠.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:ryeogo",
+   "pattern": "-(으)려고 (하다)",
+   "meaning": "in order to; intend to, be about to",
+   "level": "beginner",
+   "order": 390,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eureo",
+     "note": "-(으)러 only goes with movement verbs (가다, 오다); -(으)려고 works with any verb."
+    },
+    {
+     "patternID": "g:eul-kka-hada",
+     "note": "-(으)ㄹ까 하다 is a vaguer 'thinking of maybe doing'."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)려고",
+     "example": "가려고 / 먹으려고 해요 / 만들려고"
+    }
+   ],
+   "register": null,
+   "commonMistake": "ㄹ-stem verbs take -려고 directly: ✗ 만들으려고 → ✓ 만들려고.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:gi-ro-hada",
+   "pattern": "-기로 하다",
+   "meaning": "decide to; agree to (with someone)",
+   "level": "beginner",
+   "order": 400,
+   "prerequisites": [
+    "g:at"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-기로 하다",
+     "example": "가기로 했어요"
+    }
+   ],
+   "register": "Usually in the past (했어요) because the decision is already made.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eumyeonseo",
+   "pattern": "-(으)면서",
+   "meaning": "while (doing two things at once)",
+   "level": "beginner",
+   "order": 410,
+   "prerequisites": [
+    "g:eumyeon"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:neun-dongan",
+     "note": "-는 동안 marks a period of time and the two subjects can differ; -(으)면서 needs the same subject."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)면서",
+     "example": "먹으면서 / 걸으면서"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)면서",
+     "example": "싸면서"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)면서",
+     "example": "학생이면서"
+    }
+   ],
+   "register": null,
+   "commonMistake": "Same subject for both parts: ✗ 제가 요리하면서 동생이 청소했어요 → ✓ 제가 요리하는 동안 동생이 청소했어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-ttae",
+   "pattern": "-(으)ㄹ 때",
+   "meaning": "when (at the time of)",
+   "level": "beginner",
+   "order": 420,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 때",
+     "example": "갈 때 / 먹을 때"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄹ 때",
+     "example": "바쁠 때"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "때",
+     "example": "학생 때"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었을 때",
+     "example": "갔을 때"
+    }
+   ],
+   "register": "With nouns, just add 때: 방학 때, 학생 때.",
+   "commonMistake": "갈 때 is before or on the way; 갔을 때 is after arriving: ✓ 한국에 갔을 때 친구를 만났어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-jul-alda",
+   "pattern": "-(으)ㄹ 줄 알다/모르다",
+   "meaning": "know / not know how to do",
+   "level": "beginner",
+   "order": 430,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eul-su-itda",
+     "note": "-(으)ㄹ 수 있다 is about being able (including circumstances); -(으)ㄹ 줄 알다 is about having learned the skill."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 줄 알다",
+     "example": "수영할 줄 알아요 / 운전할 줄 몰라요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:a-do-doeda",
+   "pattern": "-아/어도 되다",
+   "meaning": "may, it's okay to",
+   "level": "beginner",
+   "order": 440,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eumyeon-an-doeda",
+     "note": "-(으)면 안 되다 is the opposite: must not."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어도 되다",
+     "example": "가도 돼요 / 먹어도 돼요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-아/어도 되다",
+     "example": "작아도 돼요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이어도/여도 되다",
+     "example": "내일이어도 돼요"
+    }
+   ],
+   "register": "As a question it asks permission: 들어가도 돼요?",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eumyeon-an-doeda",
+   "pattern": "-(으)면 안 되다",
+   "meaning": "must not, not allowed",
+   "level": "beginner",
+   "order": 450,
+   "prerequisites": [
+    "g:eumyeon"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:a-do-doeda",
+     "note": "-아/어도 되다 is the opposite: may."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)면 안 되다",
+     "example": "가면 안 돼요 / 먹으면 안 돼요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eun-geot-gatda",
+   "pattern": "-(으)ㄴ/는 것 같다",
+   "meaning": "it seems (that); I think (softens an opinion)",
+   "level": "beginner",
+   "order": 460,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eul-geot-gatda",
+     "note": "-(으)ㄹ 것 같다 is a guess about what will happen or what you can't see; -는 것 같다 is based on what is happening now."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 것 같다",
+     "example": "비가 오는 것 같아요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄴ 것 같다",
+     "example": "좋은 것 같아요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "인 것 같다",
+     "example": "학생인 것 같아요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-(으)ㄴ 것 같다 (verbs)",
+     "example": "간 것 같아요"
+    }
+   ],
+   "register": "Koreans use it a lot to sound less blunt, even about their own opinions: 이게 더 예쁜 것 같아요.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-geot-gatda",
+   "pattern": "-(으)ㄹ 것 같다",
+   "meaning": "I think it will…; it looks like it'll…",
+   "level": "beginner",
+   "order": 470,
+   "prerequisites": [
+    "g:modifier",
+    "g:eul-geoyeyo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eun-geot-gatda",
+     "note": "-는 것 같다 is based on present evidence; -(으)ㄹ 것 같다 is a prediction or a guess."
+    },
+    {
+     "patternID": "g:eul-geoyeyo",
+     "note": "-(으)ㄹ 거예요 sounds more certain."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 것 같다",
+     "example": "비가 올 것 같아요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄹ 것 같다",
+     "example": "맛있을 것 같아요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "일 것 같다",
+     "example": "학생일 것 같아요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었을 것 같다",
+     "example": "갔을 것 같아요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:ge-doeda",
+   "pattern": "-게 되다",
+   "meaning": "come to, end up (a change caused by circumstances, not your own choice)",
+   "level": "intermediate",
+   "order": 500,
+   "prerequisites": [
+    "g:at"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:a-jida",
+     "note": "-아/어지다 goes with adjectives for a change of state; -게 되다 goes with verbs for a change in situation."
+    },
+    {
+     "patternID": "g:ge-hada",
+     "note": "-게 하다 means making someone else do it."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-게 되다",
+     "example": "알게 됐어요 / 가게 됐어요"
+    }
+   ],
+   "register": "Common when announcing news politely: 다음 달에 서울로 가게 됐어요.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:a-jida",
+   "pattern": "-아/어지다",
+   "meaning": "become, get (change of state, with adjectives)",
+   "level": "intermediate",
+   "order": 510,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:ge-doeda",
+     "note": "-게 되다 is for verbs and situations; -아/어지다 for adjectives."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "adjective",
+     "form": "-아/어지다",
+     "example": "좋아졌어요 / 추워졌어요"
+    }
+   ],
+   "register": null,
+   "commonMistake": "ㅂ-irregular adjectives: ✗ 춥어졌어요 → ✓ 추워졌어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:a-isseo",
+   "pattern": "-아/어 있다",
+   "meaning": "be in a state (the result of an action remains)",
+   "level": "intermediate",
+   "order": 520,
+   "prerequisites": [
+    "g:ayo",
+    "g:go-itda"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:go-itda",
+     "note": "-고 있다 is an action in progress; -아/어 있다 is the state left after it (앉고 있어요 = sitting down, 앉아 있어요 = seated)."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어 있다",
+     "example": "앉아 있어요 / 문이 열려 있어요"
+    }
+   ],
+   "register": "Used with verbs that don't take an object (앉다, 서다, 열리다, 붙다…).",
+   "commonMistake": "✗ 문이 열고 있어요 → ✓ 문이 열려 있어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:ge",
+   "pattern": "-게",
+   "meaning": "adverb form: in a … way",
+   "level": "intermediate",
+   "order": 530,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "adjective",
+     "form": "-게",
+     "example": "맛있게 / 예쁘게"
+    }
+   ],
+   "register": "Very common in set phrases: 맛있게 드세요, 즐겁게 보내세요.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:ge-hada",
+   "pattern": "-게 하다",
+   "meaning": "make or let someone do",
+   "level": "intermediate",
+   "order": 540,
+   "prerequisites": [
+    "g:ge"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:ge-doeda",
+     "note": "-게 되다 is something that happens to you; -게 하다 is causing someone else to do it."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-게 하다",
+     "example": "동생을 웃게 했어요 / 일찍 자게 해요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:janayo",
+   "pattern": "-잖아요",
+   "meaning": "you know…, as you know (reminding the listener of something they know)",
+   "level": "intermediate",
+   "order": 550,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:geodeunyo",
+     "note": "-거든요 gives a reason the listener didn't know; -잖아요 points to something they already know."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-잖아요",
+     "example": "가잖아요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-잖아요",
+     "example": "좋잖아요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)잖아요",
+     "example": "학생이잖아요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었잖아요",
+     "example": "갔잖아요"
+    }
+   ],
+   "register": "Friendly in conversation, but can sound like 'obviously!' — careful with seniors.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:geodeunyo",
+   "pattern": "-거든요",
+   "meaning": "because, you see (giving a reason or background the listener didn't know)",
+   "level": "intermediate",
+   "order": 560,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:janayo",
+     "note": "-잖아요 is for things the listener already knows."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-거든요",
+     "example": "가거든요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-거든요",
+     "example": "바쁘거든요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)거든요",
+     "example": "학생이거든요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었거든요",
+     "example": "갔거든요"
+    }
+   ],
+   "register": "Spoken only. Also used to set up a story before the main point: 어제 명동에 갔거든요. 그런데…",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:gunyo",
+   "pattern": "-군요",
+   "meaning": "I see…, so … (realizing something, often from what you've just heard)",
+   "level": "intermediate",
+   "order": 570,
+   "prerequisites": [
+    "g:neyo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:neyo",
+     "note": "-네요 is the everyday spoken reaction; -군요 sounds a bit more formal or written."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는군요",
+     "example": "가는군요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-군요",
+     "example": "좋군요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)군요",
+     "example": "학생이군요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었군요",
+     "example": "갔군요"
+    }
+   ],
+   "register": null,
+   "commonMistake": "Present-tense verbs take -는군요: ✗ 가군요 → ✓ 가는군요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:deorago",
+   "pattern": "-더라고요",
+   "meaning": "I noticed / I found that… (reporting something you saw or felt in the past)",
+   "level": "intermediate",
+   "order": 580,
+   "prerequisites": [
+    "g:at"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-더라고요",
+     "example": "비가 오더라고요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-더라고요",
+     "example": "맛있더라고요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "(이)더라고요",
+     "example": "학생이더라고요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었더라고요",
+     "example": "벌써 갔더라고요"
+    }
+   ],
+   "register": "Conversational. Sounds natural when sharing impressions: 그 식당 정말 맛있더라고요.",
+   "commonMistake": "Not for your own actions: ✗ (제가) 어제 영화를 보더라고요 → ✓ 어제 영화를 봤어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:daga",
+   "pattern": "-다가",
+   "meaning": "while doing A, switch to B (A is interrupted or left)",
+   "level": "intermediate",
+   "order": 590,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-다가",
+     "example": "가다가 / 공부하다가"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었다가",
+     "example": "갔다가 (went and came back)"
+    }
+   ],
+   "register": "With the past form it means A was completed, then B: 학교에 갔다가 집에 왔어요.",
+   "commonMistake": "Same subject for both parts: ✗ 제가 자다가 동생이 왔어요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neunde",
+   "pattern": "-(으)ㄴ/는데",
+   "meaning": "sets up background or a soft contrast (\"…, so\" / \"…, but\")",
+   "level": "intermediate",
+   "order": 600,
+   "prerequisites": [
+    "g:jiman",
+    "g:modifier"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:jiman",
+     "note": "-지만 is a plain 'but'; -는데 is softer and often just gives background before the main point."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는데",
+     "example": "가는데"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄴ데",
+     "example": "좋은데"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "인데",
+     "example": "학생인데"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었는데",
+     "example": "갔는데"
+    }
+   ],
+   "register": "Very common in speech. Ending a sentence with -는데요 softly invites a response or signals hesitation.",
+   "commonMistake": "Action verbs take -는데: ✗ 가은데 → ✓ 가는데. Adjectives take -(으)ㄴ데: ✗ 좋는데 → ✓ 좋은데.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neun-dongan",
+   "pattern": "-는 동안",
+   "meaning": "while, during (a period of time)",
+   "level": "intermediate",
+   "order": 610,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eumyeonseo",
+     "note": "-(으)면서 is one person doing two things at once; with -는 동안 the subjects can differ."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 동안",
+     "example": "자는 동안"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "동안",
+     "example": "방학 동안"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:gi-ttaemune",
+   "pattern": "-기 때문에",
+   "meaning": "because (a firmer, more formal reason)",
+   "level": "intermediate",
+   "order": 620,
+   "prerequisites": [
+    "g:aseo-reason"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:aseo-reason",
+     "note": "-아/어서 is the everyday spoken reason; -기 때문에 sounds firmer and more formal."
+    },
+    {
+     "patternID": "g:eunikka",
+     "note": "-(으)니까 can be followed by a request; -기 때문에 can't."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-기 때문에",
+     "example": "가기 때문에"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-기 때문에",
+     "example": "바쁘기 때문에"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "때문에",
+     "example": "일 때문에"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었기 때문에",
+     "example": "갔기 때문에"
+    }
+   ],
+   "register": null,
+   "commonMistake": "No command or suggestion after it: ✗ 비가 오기 때문에 우산을 가져가세요 → ✓ 비가 오니까 우산을 가져가세요.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-tende",
+   "pattern": "-(으)ㄹ 텐데",
+   "meaning": "it must be / it would be … (a strong guess, often followed by concern or a suggestion)",
+   "level": "intermediate",
+   "order": 630,
+   "prerequisites": [
+    "g:neunde",
+    "g:eul-geoyeyo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 텐데",
+     "example": "갈 텐데"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄹ 텐데",
+     "example": "배고플 텐데"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "일 텐데",
+     "example": "학생일 텐데"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었을 텐데",
+     "example": "갔을 텐데"
+    }
+   ],
+   "register": "Often caring: 배고플 텐데 먹어요. Also regret with -았/었으면 … -았/었을 텐데: 일찍 왔으면 좋았을 텐데.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neun-baramne",
+   "pattern": "-는 바람에",
+   "meaning": "because of (something unexpected that led to a bad result)",
+   "level": "intermediate",
+   "order": 640,
+   "prerequisites": [
+    "g:modifier",
+    "g:aseo-reason"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:aseo-reason",
+     "note": "-아/어서 is a neutral reason; -는 바람에 stresses that the cause was sudden and the result unwanted."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 바람에",
+     "example": "늦게 일어나는 바람에"
+    }
+   ],
+   "register": "The result part is in the past tense.",
+   "commonMistake": "Verbs only, and no command after it: ✗ 바쁜 바람에 → ✓ 갑자기 일이 생기는 바람에.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-ppunmanaanira",
+   "pattern": "-(으)ㄹ 뿐만 아니라",
+   "meaning": "not only … but also",
+   "level": "intermediate",
+   "order": 650,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 뿐만 아니라",
+     "example": "잘할 뿐만 아니라"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄹ 뿐만 아니라",
+     "example": "쌀 뿐만 아니라"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "뿐만 아니라",
+     "example": "한국어뿐만 아니라"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었을 뿐만 아니라",
+     "example": "갔을 뿐만 아니라"
+    }
+   ],
+   "register": "The second part usually has -도: 쌀 뿐만 아니라 맛도 있어요.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neun-pyeonida",
+   "pattern": "-(으)ㄴ/는 편이다",
+   "meaning": "tend to be, be on the … side",
+   "level": "intermediate",
+   "order": 660,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 편이다",
+     "example": "많이 먹는 편이에요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄴ 편이다",
+     "example": "바쁜 편이에요"
+    }
+   ],
+   "register": "Softens a description of yourself or others: 저는 키가 큰 편이에요.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neun-daesine",
+   "pattern": "-는 대신에",
+   "meaning": "instead of; in exchange for",
+   "level": "intermediate",
+   "order": 670,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 대신에",
+     "example": "가는 대신에"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "대신에",
+     "example": "커피 대신에"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-manhada",
+   "pattern": "-(으)ㄹ 만하다",
+   "meaning": "worth doing; good enough to",
+   "level": "intermediate",
+   "order": 680,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ 만하다",
+     "example": "볼 만해요 / 먹을 만해요"
+    }
+   ],
+   "register": "먹을 만해요 can mean 'it's decent' rather than 'it's great' — tone matters.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:na-boda",
+   "pattern": "-나 보다 / -(으)ㄴ가 보다",
+   "meaning": "it seems (a guess from what you observe)",
+   "level": "intermediate",
+   "order": 690,
+   "prerequisites": [
+    "g:eun-geot-gatda"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:eun-geot-gatda",
+     "note": "-는 것 같다 can describe your own feelings or opinions; -나 보다 is only a guess about others or situations you observe."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-나 보다",
+     "example": "비가 오나 봐요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-(으)ㄴ가 보다",
+     "example": "바쁜가 봐요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "인가 보다",
+     "example": "학생인가 봐요"
+    },
+    {
+     "appliesTo": "past",
+     "form": "-았/었나 보다",
+     "example": "갔나 봐요"
+    }
+   ],
+   "register": null,
+   "commonMistake": "Not about yourself: ✗ 제가 피곤한가 봐요 (unless you just realized it).",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:dorok",
+   "pattern": "-도록",
+   "meaning": "so that; to the point that",
+   "level": "intermediate",
+   "order": 700,
+   "prerequisites": [
+    "g:ryeogo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-도록",
+     "example": "늦지 않도록 / 밤새도록"
+    }
+   ],
+   "register": "Often in polite instructions: 늦지 않도록 하세요 (Make sure you're not late).",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eun-ji",
+   "pattern": "-(으)ㄴ 지",
+   "meaning": "since (time passed since doing)",
+   "level": "intermediate",
+   "order": 710,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄴ 지 + time + 되다",
+     "example": "한국에 온 지 1년 됐어요"
+    }
+   ],
+   "register": null,
+   "commonMistake": "Spaced as 온 지, and followed by a length of time: ✗ 온지 → ✓ 온 지.",
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eul-kka-hada",
+   "pattern": "-(으)ㄹ까 하다",
+   "meaning": "be thinking of (maybe) doing",
+   "level": "intermediate",
+   "order": 720,
+   "prerequisites": [
+    "g:eulkkayo"
+   ],
+   "contrasts": [
+    {
+     "patternID": "g:ryeogo",
+     "note": "-(으)려고 하다 is a firmer intention; -(으)ㄹ까 하다 is still undecided."
+    }
+   ],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-(으)ㄹ까 하다",
+     "example": "주말에 쉴까 해요"
+    }
+   ],
+   "register": null,
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:eumyeon-joketda",
+   "pattern": "-았/었으면 좋겠다",
+   "meaning": "I wish, I hope",
+   "level": "intermediate",
+   "order": 730,
+   "prerequisites": [
+    "g:eumyeon",
+    "g:at"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-았/었으면 좋겠다",
+     "example": "갔으면 좋겠어요"
+    },
+    {
+     "appliesTo": "adjective",
+     "form": "-았/었으면 좋겠다",
+     "example": "날씨가 좋았으면 좋겠어요"
+    },
+    {
+     "appliesTo": "noun",
+     "form": "이었/였으면 좋겠다",
+     "example": "주말이었으면 좋겠어요"
+    }
+   ],
+   "register": "The past form is the most common, even for future wishes.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:a-beorida",
+   "pattern": "-아/어 버리다",
+   "meaning": "do completely (often with relief or regret)",
+   "level": "intermediate",
+   "order": 740,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-아/어 버리다",
+     "example": "다 먹어 버렸어요 / 잊어버렸어요"
+    }
+   ],
+   "register": "The feeling comes from context: relief (숙제를 끝내 버렸어요) or regret (잊어버렸어요).",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:neun-gire",
+   "pattern": "-는 길에",
+   "meaning": "on the way (to/from)",
+   "level": "intermediate",
+   "order": 750,
+   "prerequisites": [
+    "g:modifier"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-는 길에",
+     "example": "집에 가는 길에 / 오는 길에"
+    }
+   ],
+   "register": "Only with movement verbs like 가다, 오다, 나가다.",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  },
+  {
+   "id": "g:gi-swipda",
+   "pattern": "-기 쉽다",
+   "meaning": "easy to; likely to",
+   "level": "intermediate",
+   "order": 760,
+   "prerequisites": [
+    "g:ayo"
+   ],
+   "contrasts": [],
+   "formation": [
+    {
+     "appliesTo": "verb",
+     "form": "-기 쉽다",
+     "example": "잊기 쉬워요"
+    }
+   ],
+   "register": "Opposite: -기 어렵다 (hard to).",
+   "commonMistake": null,
+   "assumedKnown": false,
+   "checked": false,
+   "source": "Draft. Level and order follow the usual 초급/중급 textbook sequence; verify against 국제 통용 한국어 교육 표준 모형 (2017) and 한국어기초사전."
+  }
+ ]
+}
