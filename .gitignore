@@ -8,3 +8,6 @@ DerivedData/
 xcuserdata/
 *.xcresult
 .DS_Store
+
+# Worktrees for PR screenshots
+.worktrees/
