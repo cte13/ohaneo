@@ -21,9 +21,10 @@ public protocol ContentGenerator: Sendable {
     func grammarExamples(for pattern: GrammarPattern, vocabulary: [String]) async throws -> [Example]
 }
 
-/// Wraps a generator and enforces the highlight check: each example must contain
-/// its highlight text. If any example fails, the request runs once more and the
-/// failures are replaced from the second attempt; anything still failing is dropped.
+/// Wraps a generator and checks every example: its highlight must appear in the
+/// sentence, and a verb or adjective must be conjugated (see `Example.isValid`).
+/// If any example fails, the request runs once more and the failures are
+/// replaced from the second attempt; anything still failing is dropped.
 public struct CheckedGenerator: ContentGenerator {
     public let base: any ContentGenerator
 
@@ -34,10 +35,11 @@ public struct CheckedGenerator: ContentGenerator {
     public func vocabContent(for word: SeedWord, vocabulary: [String]) async throws -> VocabContent {
         var first = try await base.vocabContent(for: word, vocabulary: vocabulary)
         let wanted = first.examples.count
-        let valid = first.examples.filter(\.hasValidHighlight)
+        let check = { (example: Example) in example.isValid(for: word) }
+        let valid = first.examples.filter(check)
         guard valid.count < wanted else { return first }
         let retry = (try? await base.vocabContent(for: word, vocabulary: vocabulary))?.examples ?? []
-        first.examples = Self.fill(valid, from: retry, upTo: wanted)
+        first.examples = Self.fill(valid, from: retry, upTo: wanted, where: check)
         return first
     }
 
@@ -46,12 +48,12 @@ public struct CheckedGenerator: ContentGenerator {
         let valid = first.filter(\.hasValidHighlight)
         guard valid.count < first.count else { return first }
         let retry = (try? await base.grammarExamples(for: pattern, vocabulary: vocabulary)) ?? []
-        return Self.fill(valid, from: retry, upTo: first.count)
+        return Self.fill(valid, from: retry, upTo: first.count, where: \.hasValidHighlight)
     }
 
-    static func fill(_ valid: [Example], from retry: [Example], upTo count: Int) -> [Example] {
+    static func fill(_ valid: [Example], from retry: [Example], upTo count: Int, where isValid: (Example) -> Bool) -> [Example] {
         var result = valid
-        for example in retry where example.hasValidHighlight && result.count < count {
+        for example in retry where isValid(example) && result.count < count {
             if !result.contains(where: { $0.korean == example.korean }) { result.append(example) }
         }
         return result
@@ -69,10 +71,11 @@ public struct FakeContentGenerator: ContentGenerator {
     public func vocabContent(for word: SeedWord, vocabulary: [String]) async throws -> VocabContent {
         try await Task.sleep(for: delay)
         let friend = vocabulary.first ?? "친구"
+        let form = word.forms?.polite ?? word.korean
         return VocabContent(
             examples: [
-                Example(korean: "오늘 \(friend)하고 \(word.korean) 이야기를 했어요.", english: "Today I talked about “\(word.meaning)” with \(friend).", highlight: word.korean),
-                Example(korean: "\(word.korean)? 처음 들어 봤어요.", english: "“\(word.meaning)”? I've never heard that before.", highlight: word.korean),
+                Example(korean: "오늘 \(friend)하고 \(form) 이야기를 했어요.", english: "Today I talked about “\(word.meaning)” with \(friend).", highlight: form),
+                Example(korean: "\(form)? 처음 들어 봤어요.", english: "“\(word.meaning)”? I've never heard that before.", highlight: form),
             ],
             nuance: "Sample note: in real use the on-device model explains when and how people say “\(word.korean)”.",
             mnemonic: "Sample memory hook for “\(word.meaning)”."

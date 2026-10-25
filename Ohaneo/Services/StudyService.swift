@@ -26,6 +26,11 @@ final class StudyService {
     private(set) var generating: Set<UUID> = []
 
     private var generationTask: Task<Void, Never>?
+    private var factsSynced = false
+
+    /// Bump when the generator's prompt or checks change, so cards still in
+    /// play get new AI content. 2: conjugated forms in prompt, dictionary-form check.
+    static let contentVersion = 2
 
     init(
         container: ModelContainer,
@@ -58,6 +63,11 @@ final class StudyService {
         guard preferences.preferences.placement != nil else { return }
         let day = currentDay
         let items = allItems()
+        if !factsSynced {
+            // Pick up corrected meanings and forms from updated word lists.
+            for item in items { item.syncFacts(from: library) }
+            factsSynced = true
+        }
 
         if let current = items
             .filter({ $0.scheduledFor == day && $0.status != .skipped && $0.status != .upcoming })
@@ -248,7 +258,8 @@ final class StudyService {
 
     private func nextItemNeedingContent() -> StudyItem? {
         let needsContent = { (item: StudyItem) in
-            item.modelContext != nil && !item.hasGeneratedContent && !item.generationFailed
+            item.modelContext != nil && !item.generationFailed
+                && (!item.hasGeneratedContent || item.contentVersion < Self.contentVersion)
         }
         if let today, needsContent(today) { return today }
         return pooledItems().first(where: needsContent)
@@ -273,6 +284,7 @@ final class StudyService {
                 item.examples = examples
             }
             item.generatedAt = now()
+            item.contentVersion = Self.contentVersion
             item.generationFailed = false
         } catch {
             guard item.modelContext != nil else { return }

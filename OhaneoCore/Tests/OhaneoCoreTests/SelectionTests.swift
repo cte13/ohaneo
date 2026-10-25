@@ -187,6 +187,25 @@ import Testing
         #expect(await script.calls == 2)
     }
 
+    @Test func dictionaryFormOfAPredicateIsRejected() {
+        let word = SeedWord(id: "w:1", korean: "어떻다", meaning: "how", partOfSpeech: "adjective", rank: 1)
+        #expect(!Example(korean: "영화가 너무 어떻다!", english: "", highlight: "어떻다").isValid(for: word))
+        #expect(!Example(korean: "날씨가 어때요? 어떻다", english: "", highlight: "어때요").isValid(for: word))
+        #expect(Example(korean: "날씨가 어때요?", english: "", highlight: "어때요").isValid(for: word))
+        #expect(Example(korean: "그 영화가 어떻다고 했어요?", english: "", highlight: "어떻다고").isValid(for: word))
+        let noun = SeedWord(id: "w:2", korean: "학교", meaning: "school", partOfSpeech: "noun", rank: 2)
+        #expect(Example(korean: "학교에 가요.", english: "", highlight: "학교").isValid(for: noun))
+    }
+
+    @Test func unconjugatedVocabExampleIsReplacedFromRetry() async throws {
+        let bad = Example(korean: "영화가 너무 어떻다!", english: "", highlight: "어떻다")
+        let good = Example(korean: "그 영화 어땠어요?", english: "", highlight: "어땠어요")
+        let script = Script([[bad], [good]])
+        let word = SeedWord(id: "w:1", korean: "어떻다", meaning: "how", partOfSpeech: "adjective", rank: 1)
+        let result = try await CheckedGenerator(base: script).vocabContent(for: word, vocabulary: [])
+        #expect(result.examples == [good])
+    }
+
     @Test func stillBadAfterRetryIsDropped() async throws {
         let script = Script([[good1, bad], [bad]])
         let word = SeedWord(id: "w:1", korean: "가다", meaning: "go", rank: 1)

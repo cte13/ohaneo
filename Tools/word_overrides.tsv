@@ -1,0 +1,66 @@
+# Learner-friendly glosses for words where the krdict English equivalent is
+# correct but unhelpful, or where the matched entry is a rarer sense.
+# Columns (tab-separated): id	korean	meaning	definition
+# definition: empty keeps krdict's, "-" removes it, anything else replaces it.
+# Reviewed: all beginner (초급) words. Intermediate and advanced not yet reviewed.
+w:68797	있다	there is, there are; have
+w:89917	없다	there isn't, there aren't; not have
+w:70482	어떻다	how (something is), what (something is) like	How something is: its state, condition or situation. Most often heard as 어때요? (How is it?)
+w:72244	어떠하다	how (something is), what (something is) like	How something is: its state, condition or situation. A longer, more formal form of 어떻다.
+w:61178	그렇다	be like that, be so	-
+w:71157	이렇다	be like this	-
+w:20911	마음	heart, mind; feelings
+w:71278	속	inside, interior
+w:17301	전	before, ago
+w:62885	후	after, later
+w:62800	보통	usually; ordinary, average
+w:68090	오랜만	a long time (since last time)	It has been a long time. Often heard as 오랜만이에요 (Long time no see).
+w:68088	오래간만	a long time (since last time)	The longer form of 오랜만.
+w:30207	혼자	alone, by oneself
+w:29702	다니다	go regularly, attend (school, work)	-
+w:17173	지내다	spend time, get along, live
+w:70073	잘하다	be good at, do well	-
+w:91168	못하다	can't do, be bad at	-
+w:64744	바로	right (away), directly; just
+w:62210	나다	come out, appear; happen
+w:89906	내다	pay; hand in; put out	-
+w:31684	교수	professor	-
+w:57258	시	city	-
+w:60635	그분	that person (honorific)
+w:57334	한번	once; sometime; (give it) a try
+w:72523	안녕하다	be well, be at peace (안녕하세요: hello)
+w:89820	아주머니	ma'am; middle-aged woman
+w:26237	아저씨	mister; middle-aged man
+w:27372	커피	coffee	-
+w:26850	생선	fish (as food)	-
+w:73272	피우다	smoke (a cigarette); make bloom	-
+w:17749	계시다	be, stay (honorific of 있다)	-
+w:83239	켜다	turn on, switch on (a light, device)	-
+w:63320	찍다	take (a photo); stamp	-
+w:74103	돌아가다	go back, return	-
+w:84999	소개하다	introduce	-
+w:58157	날짜	date
+w:36676	며칠	a few days; what day (of the month)
+w:64392	댁	house, home (honorific)	-
+w:20264	층	floor, story; layer
+w:30193	내일	tomorrow
+w:57271	싫다	dislike; not want to
+w:62239	아프다	hurt; be sick
+w:89534	놓다	put, place; let go
+w:63547	세수	washing one's face
+w:44797	휴지	tissue, toilet paper	-
+w:66284	실례하다	excuse me; be rude	-
+w:67883	미안하다	sorry
+w:57301	반	class (group of students)
+w:70748	동생	younger brother or sister
+w:20286	형	older brother (said by a man)
+w:68006	오빠	older brother (said by a woman)
+w:31971	언니	older sister (said by a woman)
+w:32205	누나	older sister (said by a man)
+w:62818	선생님	teacher (polite)
+w:44506	저	I, me (humble)
+w:27365	말씀	words (honorific or humble)
+w:61168	드리다	give (humble, to someone older or senior)
+w:71205	잡수시다	eat (honorific)
+w:17200	말씀하다	say, speak (honorific)
+w:67316	얼마나	how (much, many, long)

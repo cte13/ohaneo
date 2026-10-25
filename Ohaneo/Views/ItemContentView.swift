@@ -77,6 +77,12 @@ struct CardDetails: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
+        if let forms = item.forms {
+            VStack(alignment: .leading, spacing: 10) {
+                SectionHeading("Forms")
+                FormsTable(forms: forms)
+            }
+        }
         examples
         if let nuance = item.nuance {
             note("How it's used", nuance)
@@ -158,6 +164,50 @@ struct CardDetails: View {
                 .foregroundStyle(Theme.ink)
                 .fixedSize(horizontal: false, vertical: true)
         }
+    }
+}
+
+/// Polite, polite past and formal forms of a verb or adjective, each with a
+/// listen button.
+struct FormsTable: View {
+    let forms: WordForms
+
+    private var rows: [(label: String, register: String, form: String)] {
+        [
+            ("Polite", "해요체", forms.polite),
+            ("Polite past", "해요체", forms.politePast),
+            ("Formal", "합니다체", forms.formal),
+        ]
+    }
+
+    var body: some View {
+        Grid(alignment: .leading, horizontalSpacing: 14, verticalSpacing: 0) {
+            ForEach(Array(rows.enumerated()), id: \.offset) { index, row in
+                if index > 0 {
+                    GridRule().gridCellUnsizedAxes(.horizontal)
+                }
+                GridRow {
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(row.label)
+                            .font(.subheadline)
+                            .foregroundStyle(Theme.inkSecondary)
+                        Text(row.register)
+                            .font(.batang(13, relativeTo: .caption))
+                            .foregroundStyle(Theme.inkSecondary.opacity(0.8))
+                    }
+                    Text(row.form)
+                        .font(.batang(19, bold: true, relativeTo: .body))
+                        .foregroundStyle(Theme.ink)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    ListenButton(text: row.form, size: .small)
+                }
+                .padding(.vertical, 4)
+            }
+        }
+        .padding(.leading, 12)
+        .padding(.trailing, 4)
+        .overlay(Rectangle().stroke(Theme.grid, lineWidth: 1))
+        .accessibilityElement(children: .contain)
     }
 }
 
