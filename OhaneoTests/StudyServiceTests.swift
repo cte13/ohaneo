@@ -178,3 +178,15 @@ import Testing
         #expect(preview[1].item?.kind == .grammar)
     }
 }
+
+/// The textbook lessons are kept out of git; when they're present, every file
+/// must decode, or the Class tab would silently show nothing.
+@Suite struct BundledCourseTests {
+    @Test func lessonFilesDecode() throws {
+        let files = (Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: nil) ?? [])
+            .filter { $0.lastPathComponent.hasPrefix("sejong1-") }
+        let course = try CourseBook.load(title: "", lessonFiles: files)
+        #expect(course.lessons.count == files.count)
+        #expect(Set(course.lessons.map(\.number)).count == course.lessons.count)
+    }
+}

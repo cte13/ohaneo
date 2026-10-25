@@ -38,6 +38,9 @@ struct RootView: View {
             Tab("Today", systemImage: "square.grid.3x1.below.line.grid.1x2", value: "today") {
                 TodayView()
             }
+            Tab("Class", systemImage: "book.closed", value: "class") {
+                ClassView(course: ClassView.bundledCourse)
+            }
             Tab("History", systemImage: "clock", value: "history") {
                 HistoryView()
             }
@@ -47,7 +50,7 @@ struct RootView: View {
         }
     }
 
-    /// Debug launch argument `-tab history|settings` opens that tab, for screenshots.
+    /// Debug launch argument `-tab class|history|settings` opens that tab, for screenshots.
     private static var initialTab: String {
         #if DEBUG
         let args = ProcessInfo.processInfo.arguments

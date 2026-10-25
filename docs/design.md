@@ -119,6 +119,7 @@ A small on-device model will sometimes invent conjugation rules that sound right
 | Screen | Contents |
 |---|---|
 | **Today** | Daily card (vocab or grammar), actions, up to 3 review prompts, "Ask about this" |
+| **Class** | Lessons from the textbook of a class you're taking, grouped into Prepare for class / Homework / Review: words with 🔊, grammar, every exercise with tap-to-reveal answers, dialogue and reading, and a flashcard drill. The transcribed lessons stay out of git (see `docs/course.md`). |
 | **History** | Grouped by date; filter by **type** (Words / Phrases / Grammar) and **status** (Learning / Known / Skipped); search Korean or English |
 | **Settings** | Redo placement, notification time or off (MVP); grammar days per week, word vs phrase mix, topics (food, travel, work, K-drama…), AI provider (later); About with data attributions |
 
